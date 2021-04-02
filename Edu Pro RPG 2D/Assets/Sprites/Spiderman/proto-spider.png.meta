@@ -1,0 +1,2288 @@
+fileFormatVersion: 2
+guid: 2b62c3fcb98076346b2648bf3dfb3822
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3764937219651620807
+    second: proto-spider_0
+  - first:
+      213: 669893504182616243
+    second: proto-spider_1
+  - first:
+      213: -4391118999983351289
+    second: proto-spider_2
+  - first:
+      213: -3949232819104515223
+    second: proto-spider_3
+  - first:
+      213: -6601539156251473196
+    second: proto-spider_4
+  - first:
+      213: 8243475166560205632
+    second: proto-spider_5
+  - first:
+      213: 1486063894686380519
+    second: proto-spider_6
+  - first:
+      213: -7260368191344429084
+    second: proto-spider_7
+  - first:
+      213: -6156243330181407379
+    second: proto-spider_8
+  - first:
+      213: 6631512092339669814
+    second: proto-spider_9
+  - first:
+      213: 4842156951963269521
+    second: proto-spider_10
+  - first:
+      213: 1708342596901379758
+    second: proto-spider_11
+  - first:
+      213: -143588873027198837
+    second: proto-spider_12
+  - first:
+      213: 7224048217084221540
+    second: proto-spider_13
+  - first:
+      213: -5372617441410580600
+    second: proto-spider_14
+  - first:
+      213: -3338839610467954836
+    second: proto-spider_15
+  - first:
+      213: -3954347708058269175
+    second: proto-spider_16
+  - first:
+      213: -9016203371770852334
+    second: proto-spider_17
+  - first:
+      213: 4438453808664553901
+    second: proto-spider_18
+  - first:
+      213: -3371201985116585470
+    second: proto-spider_19
+  - first:
+      213: 1877411361802758784
+    second: proto-spider_20
+  - first:
+      213: 4768368402962935587
+    second: proto-spider_21
+  - first:
+      213: 2782067843108202294
+    second: proto-spider_22
+  - first:
+      213: -4985539740849867892
+    second: proto-spider_23
+  - first:
+      213: 3985139196278578979
+    second: proto-spider_24
+  - first:
+      213: 3992378157776122468
+    second: proto-spider_25
+  - first:
+      213: 7695782407059131013
+    second: proto-spider_26
+  - first:
+      213: -3130105484584322980
+    second: proto-spider_27
+  - first:
+      213: 1524542298522351815
+    second: proto-spider_28
+  - first:
+      213: -7884774356823719640
+    second: proto-spider_29
+  - first:
+      213: -4302407814917463360
+    second: proto-spider_30
+  - first:
+      213: -8709362273342297927
+    second: proto-spider_31
+  - first:
+      213: 2772993367799439639
+    second: proto-spider_32
+  - first:
+      213: -3140367940291882845
+    second: proto-spider_33
+  - first:
+      213: 6271245297222290276
+    second: proto-spider_34
+  - first:
+      213: 9068407789231111495
+    second: proto-spider_35
+  - first:
+      213: -2421684268274008524
+    second: proto-spider_36
+  - first:
+      213: -5524756694701672481
+    second: proto-spider_37
+  - first:
+      213: 399531897810482946
+    second: proto-spider_38
+  - first:
+      213: -4202285415668660732
+    second: proto-spider_39
+  - first:
+      213: 6103759882878315119
+    second: proto-spider_40
+  - first:
+      213: 7588766734749840815
+    second: proto-spider_41
+  - first:
+      213: 3629770639043076753
+    second: proto-spider_42
+  - first:
+      213: 5233981588802381817
+    second: proto-spider_43
+  - first:
+      213: -8967401164916818886
+    second: proto-spider_44
+  - first:
+      213: -9105470330552003541
+    second: proto-spider_45
+  - first:
+      213: -41105251751237640
+    second: proto-spider_46
+  - first:
+      213: -3352185886029352462
+    second: proto-spider_47
+  - first:
+      213: 4793992816650548194
+    second: proto-spider_48
+  - first:
+      213: -8747108973403871320
+    second: proto-spider_49
+  - first:
+      213: -843118490798961639
+    second: proto-spider_50
+  - first:
+      213: -4482436150062461476
+    second: proto-spider_51
+  - first:
+      213: -8829360339693683069
+    second: proto-spider_52
+  - first:
+      213: -4552938126789630001
+    second: proto-spider_53
+  - first:
+      213: -721892834263375527
+    second: proto-spider_54
+  - first:
+      213: 3240100857123321312
+    second: proto-spider_55
+  - first:
+      213: -7754598158309530426
+    second: proto-spider_56
+  - first:
+      213: -2954976214852502527
+    second: proto-spider_57
+  - first:
+      213: 1643100173291467667
+    second: proto-spider_58
+  - first:
+      213: 7572205022285339491
+    second: proto-spider_59
+  - first:
+      213: -353161073712740164
+    second: proto-spider_60
+  - first:
+      213: -2549742442926804814
+    second: proto-spider_61
+  - first:
+      213: -2086946611808646952
+    second: proto-spider_62
+  - first:
+      213: -6246253353769399004
+    second: proto-spider_63
+  - first:
+      213: 6753162966480515173
+    second: proto-spider_64
+  - first:
+      213: -5297812485671264952
+    second: proto-spider_65
+  - first:
+      213: 3220717608200423534
+    second: proto-spider_66
+  - first:
+      213: 9101614543646176838
+    second: proto-spider_67
+  - first:
+      213: -8258693003144642128
+    second: proto-spider_68
+  - first:
+      213: 2920022305746196557
+    second: proto-spider_69
+  - first:
+      213: 7903688454451807469
+    second: proto-spider_70
+  - first:
+      213: 4955709836509488998
+    second: proto-spider_71
+  - first:
+      213: -1092512343597845557
+    second: proto-spider_72
+  - first:
+      213: -6877004724931178553
+    second: proto-spider_73
+  - first:
+      213: 1986218267700805846
+    second: proto-spider_74
+  - first:
+      213: -6406270399082165673
+    second: proto-spider_75
+  - first:
+      213: -5822753033598235754
+    second: proto-spider_76
+  - first:
+      213: 7664117320263914525
+    second: proto-spider_77
+  - first:
+      213: -449187101711563884
+    second: proto-spider_78
+  - first:
+      213: -871432313724348203
+    second: proto-spider_79
+  - first:
+      213: 7714782277541428827
+    second: proto-spider_80
+  - first:
+      213: 2473425057209916850
+    second: proto-spider_81
+  - first:
+      213: 2859943567011518348
+    second: proto-spider_82
+  - first:
+      213: -4803140837264491302
+    second: proto-spider_83
+  - first:
+      213: 7319287051519932620
+    second: proto-spider_84
+  - first:
+      213: -3024877721721498606
+    second: proto-spider_85
+  - first:
+      213: -4329597576302606070
+    second: proto-spider_86
+  - first:
+      213: -2764955897614665360
+    second: proto-spider_87
+  - first:
+      213: 3514145160166238923
+    second: proto-spider_88
+  - first:
+      213: -737934272986656049
+    second: proto-spider_89
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: proto-spider_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 336
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930b405db8140cbc0800000000000000
+      internalID: -3764937219651620807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 336
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b08522c790fb4900800000000000000
+      internalID: 669893504182616243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 336
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a168fd88c9f03c0800000000000000
+      internalID: -4391118999983351289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 336
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bf5f9cca18139c0800000000000000
+      internalID: -3949232819104515223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 336
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da8cc42d1f9264a0800000000000000
+      internalID: -6601539156251473196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 336
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b3399fcf4b66270800000000000000
+      internalID: 8243475166560205632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_6
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 336
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1b05c1d3f8f9410800000000000000
+      internalID: 1486063894686380519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 336
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7be58d89dfd3b90800000000000000
+      internalID: -7260368191344429084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_8
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 336
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d5ba1fe41a09aa0800000000000000
+      internalID: -6156243330181407379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 288
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b0d9bdc1dd70c50800000000000000
+      internalID: 6631512092339669814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_10
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 288
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199757cc71cc23340800000000000000
+      internalID: 4842156951963269521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_11
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 288
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae99fa6a8045b710800000000000000
+      internalID: 1708342596901379758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_12
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 288
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80e3854eaed10ef0800000000000000
+      internalID: -143588873027198837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_13
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 288
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468599b2499f04460800000000000000
+      internalID: 7224048217084221540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_14
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 288
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f77a207e0a075b0800000000000000
+      internalID: -5372617441410580600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_15
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 288
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fcd00701f0aa1d0800000000000000
+      internalID: -3338839610467954836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_16
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 288
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a8ec6e5b55f19c0800000000000000
+      internalID: -3954347708058269175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_17
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 288
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c4be2adc200e280800000000000000
+      internalID: -9016203371770852334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 240
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da92e69193e889d30800000000000000
+      internalID: 4438453808664553901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_19
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 240
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202c80be7a51731d0800000000000000
+      internalID: -3371201985116585470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_20
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 240
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a2985cfa7ed0a10800000000000000
+      internalID: 1877411361802758784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 240
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f6dc07cc5ac2240800000000000000
+      internalID: 4768368402962935587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_22
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 240
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637608996f3eb9620800000000000000
+      internalID: 2782067843108202294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_23
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 240
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83fc0d250ecfcab0800000000000000
+      internalID: -4985539740849867892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_24
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 240
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f9bae1cfe0e4730800000000000000
+      internalID: 3985139196278578979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_25
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 240
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462364f28c6c76730800000000000000
+      internalID: 3992378157776122468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_26
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 240
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ac5714359ecca60800000000000000
+      internalID: 7695782407059131013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_27
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 241
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5879d155a1af84d0800000000000000
+      internalID: -3130105484584322980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_28
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 241
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c87b74a423482510800000000000000
+      internalID: 1524542298522351815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_29
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 241
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821c96f6f77a39290800000000000000
+      internalID: -7884774356823719640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 192
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2eaf033e6ca44c0800000000000000
+      internalID: -4302407814917463360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_31
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 192
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b86e351821222780800000000000000
+      internalID: -8709362273342297927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_32
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 192
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711233ca6c6ab7620800000000000000
+      internalID: 2772993367799439639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_33
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 192
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a090e62ffb2b64d0800000000000000
+      internalID: -3140367940291882845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_34
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 192
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b06401f50f70750800000000000000
+      internalID: 6271245297222290276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_35
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 192
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d718b76d479dd70800000000000000
+      internalID: 9068407789231111495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_36
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 192
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e30671df2746ed0800000000000000
+      internalID: -2421684268274008524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_37
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 192
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd778ddbe0f1453b0800000000000000
+      internalID: -5524756694701672481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_38
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 192
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2077e6de42c6b8500800000000000000
+      internalID: 399531897810482946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_39
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 193
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406c34addab7ea5c0800000000000000
+      internalID: -4202285415668660732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_40
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 193
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6aed3d3649e4b450800000000000000
+      internalID: 6103759882878315119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_41
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 193
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5b0146327b05960800000000000000
+      internalID: 7588766734749840815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 144
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1922e443a298f5230800000000000000
+      internalID: 3629770639043076753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_43
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 144
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f720813686d2a840800000000000000
+      internalID: 5233981588802381817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_44
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 144
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c75bed6246d8380800000000000000
+      internalID: -8967401164916818886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_45
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 144
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24d69a2afed2a180800000000000000
+      internalID: -9105470330552003541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_46
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 144
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7e6f6cdf6fd6ff0800000000000000
+      internalID: -41105251751237640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_47
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 144
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1742282b4aa71d0800000000000000
+      internalID: -3352185886029352462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_48
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 144
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3fa3c211fa78240800000000000000
+      internalID: 4793992816650548194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_49
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 144
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a761ac9bb60c9680800000000000000
+      internalID: -8747108973403871320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_50
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 144
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c4d5c1334ac44f0800000000000000
+      internalID: -843118490798961639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_51
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 145
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd482b02103bc1c0800000000000000
+      internalID: -4482436150062461476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_52
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 145
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38eb2ae0d8fc77580800000000000000
+      internalID: -8829360339693683069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_53
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 145
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc72f5c65e6b0d0c0800000000000000
+      internalID: -4552938126789630001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 96
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951e4dfba425bf5f0800000000000000
+      internalID: -721892834263375527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_55
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 96
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e53641109627fc20800000000000000
+      internalID: 3240100857123321312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_56
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 96
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4ef068f02226490800000000000000
+      internalID: -7754598158309530426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_57
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 96
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cfcf9e9c0ddf6d0800000000000000
+      internalID: -2954976214852502527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_58
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 96
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393bb6fe6e67dc610800000000000000
+      internalID: 1643100173291467667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_59
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 96
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b1fb73950e51960800000000000000
+      internalID: 7572205022285339491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_60
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 96
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb84bd4efd1591bf0800000000000000
+      internalID: -353161073712740164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_61
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 96
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b07c9cd1ce7d9cd0800000000000000
+      internalID: -2549742442926804814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_62
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 96
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8c0f91d1da903e0800000000000000
+      internalID: -2086946611808646952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_63
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 97
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d8b773ba9d059a0800000000000000
+      internalID: -6246253353769399004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_64
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 97
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560f46f20fd08bd50800000000000000
+      internalID: 6753162966480515173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_65
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 97
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d5fe00d936a76b0800000000000000
+      internalID: -5297812485671264952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_66
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 48
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68c1aeb99942bc20800000000000000
+      internalID: 3220717608200423534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_67
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 48
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6463f8c743e6f4e70800000000000000
+      internalID: 9101614543646176838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_68
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 48
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b14f86587a336d80800000000000000
+      internalID: -8258693003144642128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_69
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 48
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48183ee0d0068820800000000000000
+      internalID: 2920022305746196557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_70
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 48
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4c4f616ca8fad60800000000000000
+      internalID: 7903688454451807469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_71
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 48
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667ae0ff6d736c440800000000000000
+      internalID: 4955709836509488998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_72
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 48
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3fe17dfcd96d0f0800000000000000
+      internalID: -1092512343597845557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_73
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 48
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf4bcb73a8ff80a0800000000000000
+      internalID: -6877004724931178553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_74
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 48
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0c2b4bdf6709b10800000000000000
+      internalID: 1986218267700805846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_75
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 49
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a8b9f830b5817a0800000000000000
+      internalID: -6406270399082165673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_76
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 49
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b8c8957fc613fa0800000000000000
+      internalID: -5822753033598235754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_77
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 49
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14df37b81a6c5a60800000000000000
+      internalID: 7664117320263914525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_78
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4938bccf5ba24c9f0800000000000000
+      internalID: -449187101711563884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_79
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8d9ae7dec08e3f0800000000000000
+      internalID: -871432313724348203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_80
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ef5545b99601b60800000000000000
+      internalID: 7714782277541428827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_81
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd1c891cfe535220800000000000000
+      internalID: 2473425057209916850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_82
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c879265858f80b720800000000000000
+      internalID: 2859943567011518348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_83
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc7dac4bd0d75db0800000000000000
+      internalID: -4803140837264491302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_84
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc836fa4bc4539560800000000000000
+      internalID: 7319287051519932620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_85
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 0
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2141cc31db97506d0800000000000000
+      internalID: -3024877721721498606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_86
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09471c81fd2ae3c0800000000000000
+      internalID: -4329597576302606070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_87
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0797e0fa247e0a9d0800000000000000
+      internalID: -2764955897614665360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_88
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaedd88760c4c030800000000000000
+      internalID: 3514145160166238923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proto-spider_89
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc25b0f30b452c5f0800000000000000
+      internalID: -737934272986656049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
