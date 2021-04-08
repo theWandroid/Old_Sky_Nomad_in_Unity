@@ -44,7 +44,7 @@ public class NPCDialogue : MonoBehaviour
             int i = 0;
             foreach (string line in npcDialogueLines)
             {
-                finalDialogue[i++]= (npcName != null ? npcName + ": \n" : "") + line;
+                finalDialogue[i++]= (npcName != null ? npcName + " \n" : "") + line;
                
             }
 
