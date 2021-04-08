@@ -740,7 +740,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1512161143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a97ec67e5dacc49a2b1c4f2c79a049, type: 3}
+  m_Script: {fileID: 11500000, guid: 534f2c24e8116794d8d2cf571e165e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firstLevel: Pause Menu
