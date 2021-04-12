@@ -45,11 +45,11 @@ TagManager:
   - name: Middleground
     uniqueID: 3870680389
     locked: 0
-  - name: Foreground
-    uniqueID: 729849611
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 729849611
     locked: 0
   - name: Details
     uniqueID: 4275310383
