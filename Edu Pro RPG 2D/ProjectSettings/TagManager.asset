@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Limits
+  - piezapuzzle
   layers:
   - Default
   - TransparentFX
@@ -40,17 +41,17 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 1244755215
+    uniqueID: 1130470121
     locked: 0
   - name: Middleground
-    uniqueID: 1873192023
+    uniqueID: 3870680389
+    locked: 0
+  - name: Foreground
+    uniqueID: 729849611
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
-    uniqueID: 84013301
-    locked: 0
   - name: Details
-    uniqueID: 3097813913
+    uniqueID: 4275310383
     locked: 0
