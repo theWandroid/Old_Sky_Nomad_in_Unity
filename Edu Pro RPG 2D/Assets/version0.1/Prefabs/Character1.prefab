@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6328611548192430269}
   - component: {fileID: 6328611548192430268}
   - component: {fileID: 6328611548192430265}
-  - component: {fileID: 6328611548192430264}
+  - component: {fileID: 3559317345239862787}
   m_Layer: 0
   m_Name: Character1
   m_TagString: Untagged
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
+  isTalking: 0
   speed: 10
   lastMovement: {x: 0, y: 0}
   nextUuid: 
@@ -142,7 +143,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &6328611548192430264
+--- !u!70 &3559317345239862787
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,5 +157,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.125, y: 3.875}
+  m_Size: {x: 0.4047619, y: 0.7380952}
   m_Direction: 0
