@@ -4,12 +4,12 @@ using UnityEngine;
 
 public static class ImageSlicer {
 
-    public static Texture2D[,] GetSlices(Texture2D image, int blocksPerLine)
+    public static Texture2D[,] GetSlices(Texture2D image, int blocksPerLine) //devuelve una matriz bidimensional de textura y tomar la textura de la imagen para cortar
     {
-        int imageSize = Mathf.Min(image.width, image.height);
-        int blockSize = imageSize / blocksPerLine;
+        int imageSize = Mathf.Min(image.width, image.height); //imagen que sea de proporción cuadrada
+        int blockSize = imageSize / blocksPerLine; //el tamaño del bloque es igual al tamaño de la imagen dividido por bloques por linea
 
-        Texture2D[,] blocks = new Texture2D[blocksPerLine, blocksPerLine];
+        Texture2D[,] blocks = new Texture2D[blocksPerLine, blocksPerLine]; //establecerlo a una nueva matriz de tamaño de bloques por linea
 
         for (int y = 0; y < blocksPerLine; y++)
         {

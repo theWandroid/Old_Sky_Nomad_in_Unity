@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
 
-    public event System.Action<Block> OnBlockPressed;
+    public event System.Action<Block> OnBlockPressed; //desbloqueo de evento cuando se presione el bloque
 	public event System.Action OnFinishedMoving;
 
-    public Vector2Int coord;
+    public Vector2Int coord; //coordenadas
     Vector2Int startingCoord;
 
     public void Init(Vector2Int startingCoord, Texture2D image)
@@ -24,7 +24,7 @@ public class Block : MonoBehaviour {
         StartCoroutine(AnimateMove(target, duration));
     }
 
-    void OnMouseDown()
+    void OnMouseDown() // al pulsar
     {
         if (OnBlockPressed != null)
         {
@@ -32,7 +32,7 @@ public class Block : MonoBehaviour {
         }
     }
 
-    IEnumerator AnimateMove(Vector2 target, float duration)
+    IEnumerator AnimateMove(Vector2 target, float duration) //coroutine
     {
         Vector2 initialPos = transform.position;
         float percent = 0;

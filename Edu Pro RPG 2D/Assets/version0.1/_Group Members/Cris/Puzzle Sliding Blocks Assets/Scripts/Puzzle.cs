@@ -5,17 +5,17 @@ using UnityEngine;
 public class Puzzle : MonoBehaviour {
 
     public Texture2D image;
-    public int blocksPerLine = 4;
+    public int blocksPerLine = 4; //bloques por lina (vertical)
     public int shuffleLength = 20;
-    public float defaultMoveDuration = .2f;
-    public float shuffleMoveDuration = .1f;
+    public float defaultMoveDuration = .2f; //establecer la velocidad de movimiento
+    public float shuffleMoveDuration = .1f; //establecer la velocidad de movimiento
 
-    enum PuzzleState { Solved, Shuffling, InPlay };
-    PuzzleState state;
+    enum PuzzleState { Solved, Shuffling, InPlay }; //enumeración para saber si esta resuelto, se está barajando o el jugador está en medio del juego
+    PuzzleState state; //tomará por defecto el primer valor de la enumeración
 
-    Block emptyBlock;
-    Block[,] blocks;
-    Queue<Block> inputs;
+    Block emptyBlock; // bloques vacios
+    Block[,] blocks; //array de bloques
+    Queue<Block> inputs; //inputs
     bool blockIsMoving;
     int shuffleMovesRemaining;
     Vector2Int prevShuffleOffset;
@@ -27,22 +27,23 @@ public class Puzzle : MonoBehaviour {
 
     void Update()
     {
+        //empezar a barajar, revolver los bloques (piezas)
         if (state == PuzzleState.Solved && Input.GetMouseButtonDown(0)) //Dar a clic derecho para desordenar piezas
         {
             StartShuffle(); //Desordenar piezas
         }
     }
 
-    void CreatePuzzle()
+    void CreatePuzzle() //función o método para crear el puzzle
     {
         blocks = new Block[blocksPerLine, blocksPerLine];
-        Texture2D[,] imageSlices = ImageSlicer.GetSlices(image, blocksPerLine);
-        for (int y = 0; y < blocksPerLine; y++)
+        Texture2D[,] imageSlices = ImageSlicer.GetSlices(image, blocksPerLine); //matriz recortadora de imagenes 
+        for (int y = 0; y < blocksPerLine; y++) //iterar sobre la cuadricula
         {
             for (int x = 0; x < blocksPerLine; x++)
             {
-                GameObject blockObject = GameObject.CreatePrimitive(PrimitiveType.Quad);
-                blockObject.transform.position = -Vector2.one * (blocksPerLine - 1) * .5f + new Vector2(x, y);
+                GameObject blockObject = GameObject.CreatePrimitive(PrimitiveType.Quad); //iterar mi objeto del bloque
+                blockObject.transform.position = -Vector2.one * (blocksPerLine - 1) * .5f + new Vector2(x, y); //establecer posición para que el objeto del bloque se tranforme
                 blockObject.transform.parent = transform;
 
                 Block block = blockObject.AddComponent<Block>();
@@ -58,13 +59,13 @@ public class Puzzle : MonoBehaviour {
             }
         }
 
-        Camera.main.orthographicSize = blocksPerLine * .55f;
+        Camera.main.orthographicSize = blocksPerLine * .55f; //convertir el tamaño de la camara ortografica para que encaje con la altura de la pantalla (.5f) pero para darle un margen ponerlo .55f
         inputs = new Queue<Block>();
     }
 
-    void PlayerMoveBlockInput(Block blockToMove)
+    void PlayerMoveBlockInput(Block blockToMove) //intercambiar el bloque que se presiona con el bloque vacio
     {
-        if (state == PuzzleState.InPlay)
+        if (state == PuzzleState.InPlay) 
         {
             inputs.Enqueue(blockToMove);
             MakeNextPlayerMove();
@@ -79,7 +80,7 @@ public class Puzzle : MonoBehaviour {
 		}
     }
 
-    void MoveBlock(Block blockToMove, float duration)
+    void MoveBlock(Block blockToMove, float duration) // mover bloque
     {
 		if ((blockToMove.coord - emptyBlock.coord).sqrMagnitude == 1)
 		{
@@ -97,7 +98,7 @@ public class Puzzle : MonoBehaviour {
 		}
     }
 
-    void OnBlockFinishedMoving()
+    void OnBlockFinishedMoving() //ver si el jugador ha terminado de mover
     {
         blockIsMoving = false;
         CheckIfSolved();
@@ -119,7 +120,7 @@ public class Puzzle : MonoBehaviour {
         }
     }
 
-    void StartShuffle()
+    void StartShuffle() // empezar a barajar
     {
         state = PuzzleState.Shuffling;
         shuffleMovesRemaining = shuffleLength;
@@ -127,7 +128,7 @@ public class Puzzle : MonoBehaviour {
         MakeNextShuffleMove();
     }
 
-    void MakeNextShuffleMove()
+    void MakeNextShuffleMove() //siguiente movimiento aleatorio del bloque vacio con el que presiones
     {
         Vector2Int[] offsets = { new Vector2Int(1, 0), new Vector2Int(-1, 0), new Vector2Int(0, 1), new Vector2Int(0, -1) };
         int randomIndex = Random.Range(0, offsets.Length);
@@ -151,7 +152,7 @@ public class Puzzle : MonoBehaviour {
       
     }
 
-    void CheckIfSolved()
+    void CheckIfSolved() //ver si ha resuelto el puzzle
     {
         foreach (Block block in blocks)
         {
