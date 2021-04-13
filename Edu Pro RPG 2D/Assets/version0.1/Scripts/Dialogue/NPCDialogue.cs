@@ -11,6 +11,7 @@ public class NPCDialogue : MonoBehaviour
 
     private DialogueManager dialogueManager;
     private bool playerInTheZone;
+    public bool hasQuest;
 
     // Start is called before the first frame update
     void Start()
