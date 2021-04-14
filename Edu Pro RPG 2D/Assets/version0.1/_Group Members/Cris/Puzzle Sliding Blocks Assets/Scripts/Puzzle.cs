@@ -5,8 +5,10 @@ using UnityEngine;
 public class Puzzle : MonoBehaviour {
 
     public Texture2D image;
-    public int blocksPerLine = 4; //bloques por lina (vertical)
-    public int shuffleLength = 20;
+    [SerializeField] //esto hace que aunque la variable sea privada se vea en el inspector para modificarlo desde allí
+    int blocksPerLine = 4; //bloques por lina (vertical)
+    [SerializeField]
+    int shuffleLength = 20;
     public float defaultMoveDuration = .2f; //establecer la velocidad de movimiento
     public float shuffleMoveDuration = .1f; //establecer la velocidad de movimiento
 
@@ -28,7 +30,7 @@ public class Puzzle : MonoBehaviour {
     void Update()
     {
         //empezar a barajar, revolver los bloques (piezas)
-        if (state == PuzzleState.Solved && Input.GetMouseButtonDown(0)) //Dar a clic derecho para desordenar piezas
+        if (state == PuzzleState.Solved && Input.GetMouseButtonDown(0)) //Dar a clic izquierdo para desordenar piezas
         {
             StartShuffle(); //Desordenar piezas
         }
