@@ -133,7 +133,7 @@ public class Puzzle : MonoBehaviour {
     void MakeNextShuffleMove() //siguiente movimiento aleatorio del bloque vacio con el que presiones
     {
         Vector2Int[] offsets = { new Vector2Int(1, 0), new Vector2Int(-1, 0), new Vector2Int(0, 1), new Vector2Int(0, -1) };
-        int randomIndex = Random.Range(0, offsets.Length);
+        int randomIndex = Random.Range(0, offsets.Length); //hacer random 
 
         for (int i = 0; i < offsets.Length; i++)
         {
