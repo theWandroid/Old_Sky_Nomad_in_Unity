@@ -8775,7 +8775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020489372763316453, guid: 87e5470b5a984384a85fcb2820b00b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.93
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6020489372763316453, guid: 87e5470b5a984384a85fcb2820b00b0c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20568,7 +20568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675382236053458186, guid: 1b40a420f716f69499b135775aa4cad9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266404408428737222, guid: 1b40a420f716f69499b135775aa4cad9, type: 3}
       propertyPath: m_Size.x
@@ -20662,7 +20662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2715394226852656245, guid: 3813ab2a00a913e4386da3415ac70d5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 2715394226852656245, guid: 3813ab2a00a913e4386da3415ac70d5f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20791,7 +20791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3924539135961292506, guid: 08d797f40cd30024ea683ca7424065f5, type: 3}
       propertyPath: m_Name
-      value: Dialogue Canvas (1)
+      value: Dialogue Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d797f40cd30024ea683ca7424065f5, type: 3}
