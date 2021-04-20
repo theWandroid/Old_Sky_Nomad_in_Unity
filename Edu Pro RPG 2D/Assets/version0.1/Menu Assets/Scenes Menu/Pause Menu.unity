@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pausado
+  m_Text: Paused
 --- !u!222 &254242318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5619730627547699716, guid: e5772f1b676a3d948886f2e5448de931, type: 3}
       propertyPath: m_Text
-      value: Opciones
+      value: Options
       objectReference: {fileID: 0}
     - target: {fileID: 6650941070369546993, guid: e5772f1b676a3d948886f2e5448de931, type: 3}
       propertyPath: m_Pivot.x
@@ -763,18 +763,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220857917}
     m_Modifications:
-    - target: {fileID: 2990545302120198650, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: Cerrar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2990545302802110144, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: " Aplicar Gr\xE1ficos"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161619007343867, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: 'Efectos SFX:'
-      objectReference: {fileID: 0}
     - target: {fileID: 7241161619132733446, guid: 208386cdc93606444912ed1210132697, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -862,30 +850,6 @@ PrefabInstance:
     - target: {fileID: 7241161619132733561, guid: 208386cdc93606444912ed1210132697, type: 3}
       propertyPath: m_Name
       value: Options Screen
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161619167066979, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: "Gr\xE1ficos"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161619376877742, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: "M\xFAsica:"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161619897114652, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: 'Volumen General:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161620108193244, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: Sonido
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161620158696676, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: Opciones
-      objectReference: {fileID: 0}
-    - target: {fileID: 7241161620682398720, guid: 208386cdc93606444912ed1210132697, type: 3}
-      propertyPath: m_Text
-      value: "Resoluci\xF3n:"
       objectReference: {fileID: 0}
     - target: {fileID: 8912377839575157530, guid: 208386cdc93606444912ed1210132697, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1362,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5619730627547699716, guid: e5772f1b676a3d948886f2e5448de931, type: 3}
       propertyPath: m_Text
-      value: "Men\xFA Inicio"
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 6650941070369546993, guid: e5772f1b676a3d948886f2e5448de931, type: 3}
       propertyPath: m_Pivot.x
@@ -1844,7 +1808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5619730627547699716, guid: e5772f1b676a3d948886f2e5448de931, type: 3}
       propertyPath: m_Text
-      value: Reanudar
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 6650941070369546993, guid: e5772f1b676a3d948886f2e5448de931, type: 3}
       propertyPath: m_Pivot.x
@@ -1948,10 +1912,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220857917}
     m_Modifications:
-    - target: {fileID: 6017915539664692977, guid: 7ca35c0aca9a5844ba9f59300d7d9ffd, type: 3}
-      propertyPath: m_Text
-      value: Cargando
-      objectReference: {fileID: 0}
     - target: {fileID: 6017915541006787890, guid: 7ca35c0aca9a5844ba9f59300d7d9ffd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
