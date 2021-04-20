@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6328611548192430269}
   - component: {fileID: 6328611548192430268}
   - component: {fileID: 6328611548192430265}
-  - component: {fileID: 2724752825775654418}
+  - component: {fileID: 3559317345239862787}
   m_Layer: 0
   m_Name: Character1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -52
+  m_SortingOrder: 0
   m_Sprite: {fileID: 4326335289255806755, guid: b987ae2c265274347bc8fe9c6b39c8b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   isTalking: 0
-  speed: 2
+  speed: 10
   lastMovement: {x: 0, y: 0}
   nextUuid: 
 --- !u!50 &6328611548192430265
@@ -143,7 +143,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &2724752825775654418
+--- !u!70 &3559317345239862787
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,5 +157,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.32692307, y: 0.59615386}
+  m_Size: {x: 0.4047619, y: 0.7380952}
   m_Direction: 0

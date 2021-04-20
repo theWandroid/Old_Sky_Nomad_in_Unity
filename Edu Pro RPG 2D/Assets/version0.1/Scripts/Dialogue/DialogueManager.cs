@@ -44,7 +44,6 @@ public class DialogueManager : MonoBehaviour
                 avatarImage.enabled = false;
                 dialogueBox.SetActive(false);
                 playerController.isTalking = false;
-
             }
             else
             {
