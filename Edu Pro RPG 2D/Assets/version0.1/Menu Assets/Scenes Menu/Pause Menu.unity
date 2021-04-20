@@ -763,6 +763,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220857917}
     m_Modifications:
+    - target: {fileID: 2990545302120198650, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: Cerrar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990545302802110144, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: " Aplicar Gr\xE1ficos"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161619007343867, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: 'Efectos SFX:'
+      objectReference: {fileID: 0}
     - target: {fileID: 7241161619132733446, guid: 208386cdc93606444912ed1210132697, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -850,6 +862,30 @@ PrefabInstance:
     - target: {fileID: 7241161619132733561, guid: 208386cdc93606444912ed1210132697, type: 3}
       propertyPath: m_Name
       value: Options Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161619167066979, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: "Gr\xE1ficos"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161619376877742, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: "M\xFAsica:"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161619897114652, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: 'Volumen General:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161620108193244, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: Sonido
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161620158696676, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: Opciones
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241161620682398720, guid: 208386cdc93606444912ed1210132697, type: 3}
+      propertyPath: m_Text
+      value: "Resoluci\xF3n:"
       objectReference: {fileID: 0}
     - target: {fileID: 8912377839575157530, guid: 208386cdc93606444912ed1210132697, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
