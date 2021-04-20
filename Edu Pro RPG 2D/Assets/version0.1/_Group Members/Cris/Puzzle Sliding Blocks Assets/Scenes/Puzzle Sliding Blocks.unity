@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678188ecd93d3431586ee12c1e159d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 2800000, guid: 81fe0b21b37c74a419206989c752890f, type: 3}
-  blocksPerLine: 4
-  shuffleLength: 20
+  image: {fileID: 2800000, guid: d461ae4eec988184aac0ef6b8d128265, type: 3}
+  blocksPerLine: 6
+  shuffleLength: 60
   defaultMoveDuration: 0.2
   shuffleMoveDuration: 0.1
 --- !u!4 &1603525598
