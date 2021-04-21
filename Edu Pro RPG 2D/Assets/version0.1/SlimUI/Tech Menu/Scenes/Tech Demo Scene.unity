@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 4c0182c0513e03f43b392b8820353055, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 12bcc7ff2b22e324f96295b9f295f422, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -734,6 +734,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114021788861016910, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: VIDEO
+      objectReference: {fileID: 0}
     - target: {fileID: 114033041446769064, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -743,6 +747,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 861673330}
     - target: {fileID: 114114160380506868, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: TERMINAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114160380506868, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
@@ -750,10 +758,39 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114138621965524512, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CREDITOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145050376534642, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: NUEVO JUEGO
+      objectReference: {fileID: 0}
     - target: {fileID: 114228308163812382, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416602708}
+    - target: {fileID: 114234832648387924, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "DI\xC1LOGO"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114257576106936838, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: OPCIONES DE SONIDO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259275853046446, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "IDIOMA DE LOS SUBT\xCDTULOS"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114267419097517342, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "DISE\xD1O: AROOM, GASTON, MIREIA\nDESARROLLO: ANDREY, CRISTINA, DIEGO,
+        RAUL"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114281093347652522, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CANCELAR
+      objectReference: {fileID: 0}
     - target: {fileID: 114284535061363896, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
@@ -762,6 +799,22 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416602708}
+    - target: {fileID: 114287733534487578, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CONTROLES
+      objectReference: {fileID: 0}
+    - target: {fileID: 114303863031090504, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "CONFIGURACI\xD3N DEL JUEGO\r\nIR A ESTA PANTALLA. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114312302217078996, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: GRANDE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114324588491213028, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CREDITOS
+      objectReference: {fileID: 0}
     - target: {fileID: 114324588491213028, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
@@ -770,14 +823,34 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114339320393187424, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SISTEMA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345256901966274, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: TERMINAR PROGRAMA?
+      objectReference: {fileID: 0}
     - target: {fileID: 114351719846399318, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416602708}
+    - target: {fileID: 114352511286877092, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CONFIRMAR
+      objectReference: {fileID: 0}
     - target: {fileID: 114385156472177652, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
       objectReference: {fileID: 946920642}
+    - target: {fileID: 114388693467587758, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: TIPO DE ALTAVOZ
+      objectReference: {fileID: 0}
+    - target: {fileID: 114411358407540540, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CARGAR JUEGO
+      objectReference: {fileID: 0}
     - target: {fileID: 114411358407540540, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
@@ -790,18 +863,90 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416602708}
+    - target: {fileID: 114427016191203582, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "\xBFSOBREESCRIBIR LOS DATOS GUARDADOS?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114494057758660002, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: PRESET DE SONIDOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114505599839080008, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SUBTITULOS
+      objectReference: {fileID: 0}
     - target: {fileID: 114548414513251614, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416602708}
+    - target: {fileID: 114588162880530282, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SUBTITULOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602178911990880, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: 'CONFIGURACION DE VIDEO
+
+        EN ESTA PANTALLA. '
+      objectReference: {fileID: 0}
     - target: {fileID: 114602483345052720, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416602708}
+    - target: {fileID: 114616426083426328, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CONTROLES
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626996979473080, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "PEQUE\xD1O"
+      objectReference: {fileID: 0}
     - target: {fileID: 114629647693867970, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
       objectReference: {fileID: 946920642}
+    - target: {fileID: 114640148704444512, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114653321942661842, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: JUEGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680881912892916, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694695731463882, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: CANCELAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745669691466010, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: FILTRO DE OBSCENIDADES
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757404081220918, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: ACEPTAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764325831711108, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: 'CONFIGURACION DE CONTROLES
+
+        PARA ESTE PANEL.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114783009051662992, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: APPS FACTORY 2020
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804888413456570, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SONIDO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114823818211367906, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: NUEVO JUEGO
+      objectReference: {fileID: 0}
     - target: {fileID: 114823818211367906, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
@@ -809,6 +954,10 @@ PrefabInstance:
     - target: {fileID: 114823818211367906, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845618978449502, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: MAESTRO
       objectReference: {fileID: 0}
     - target: {fileID: 114846332300127628, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -823,6 +972,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114885821655586086, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: SISTEMA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885821655586086, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
@@ -834,6 +987,18 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
       objectReference: {fileID: 946920642}
+    - target: {fileID: 114914806449735264, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: OPCIONES DEL JUEGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114927009278831750, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: "CONFIGURACI\xD3N DE V\xCDDEO"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114978495671465166, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
+      propertyPath: m_text
+      value: ESCALA UI
+      objectReference: {fileID: 0}
     - target: {fileID: 223988361274798664, guid: fde6b1169b14c6945b44a7065488458d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -996,7 +1161,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -1058,6 +1223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1037008653050542, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1241893969966218, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1069,6 +1238,385 @@ PrefabInstance:
     - target: {fileID: 1527985499283046, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605886969202752, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963815008406846, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114027783787772626, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ESCALA UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114040760764795926, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CONTROLES
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060281373543436, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SILENCIAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114076378694464424, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "DISE\xD1ADORES: AROOM, GAST\xD3N, MIREIA\nPROGRAMADORES: ANDREY, CRISTINA,
+        DIEGO, RA\xDAL"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114079322384236428, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: MUTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114081370033058114, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ELIGE NICKNAME
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119909902303974, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "ELIGE CONTRASE\xD1A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151292383620370, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SONIDO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114162573347441668, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CANCELAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114186394807272604, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "\xBFCARGAR EL \xDALTIMO GUARDADO?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222978107112228, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "\xBFSOBREESCRIBIR LOS DATOS GUARDADOS?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226766436428904, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CREAR CUENTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114227722664674758, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 'CONFIGURACION DE CONTROLES
+
+        PANEL.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114252701795856826, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: INICIAR NUEVA PARTIDA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114267961632400060, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "\rELIMINAR CUENTA"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282437828483772, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 'OPCIONES DEL JUEGO
+
+        ES ESTA PANTALLA. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114300034322853758, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: MUTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114300360444583902, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 12:00
+      objectReference: {fileID: 0}
+    - target: {fileID: 114300360444583902, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311816903518242, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: VOLUMEN GENERAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 114312122104837176, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ELIMINAR CUENTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114333285814184658, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: USUARIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114336446305499366, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114377849876442756, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: OPCIONES DEL JUEGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383718900760074, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: JUEGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394529347269654, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ENTRAR EN LA CUENTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114402645222923260, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "CONTRASE\xD1A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114405341576508776, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "CONTRASE\xD1A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422198260071396, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SKY NOMAD
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422198260071396, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422198260071396, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422198260071396, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422198260071396, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426321534522596, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: GRANDE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114452049968107240, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "PEQUE\xD1O"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114474501953422190, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: NUEVA CUENTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114506116415158638, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: VIDEO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520098729478928, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: USUARIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114535126846128812, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SALIR?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563085357405682, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ELIMINAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599973754971414, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "DI\xC1LOGO VOLUMEN"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114601672700432212, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CREDITOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610029867467138, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CUENTAS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114613035320692718, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ACEPTAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620941503589072, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SALIR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620941503589072, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620941503589072, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620941503589072, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620941503589072, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114629130970626134, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: NO LOGUEADO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655644642230212, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SUBTITULOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694667066671658, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: BASE DE DATOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694667066671658, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694667066671658, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694667066671658, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694667066671658, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114706623629682702, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "CONFIRMA CONTRASE\xD1A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721847683005870, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 'CONFIGURACION DE VIDEO
+
+        EN ESTA PANTALLA.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727330964757122, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 2021
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727330964757122, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727330964757122, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727330964757122, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735942959042730, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CARGANDO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763099052014708, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CONFIRMAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849127155443508, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CREDITOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849127155443508, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849127155443508, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849127155443508, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849127155443508, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855305074625238, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CONTROLES
+      objectReference: {fileID: 0}
+    - target: {fileID: 114861010320201492, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: CANCELAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114862171806112998, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 'PERFIL: '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864937374374464, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: ACEPTAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894018141542104, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: INICIAR SESION
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894500836183088, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: OPCIONES DE SONIDO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114915723735568246, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: 'USUARIO:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917954547096392, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: NOMBRE DE LA CUENTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114939630531335362, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: JUGAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114939630531335362, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114939630531335362, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114939630531335362, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114939630531335362, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114958166145988108, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: OPCIONES
+      objectReference: {fileID: 0}
+    - target: {fileID: 114958166145988108, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114958166145988108, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114958166145988108, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114958166145988108, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114959330469961282, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: OPCIONES DE VIDEO
+      objectReference: {fileID: 0}
+    - target: {fileID: 114993495174985412, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: "CARGAR \xDALTIMO GUARDADO"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114995009934801108, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: APPS FACTORY 2020
+      objectReference: {fileID: 0}
+    - target: {fileID: 114997160660958594, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_text
+      value: SI, SALIR
       objectReference: {fileID: 0}
     - target: {fileID: 223755256868501534, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
       propertyPath: m_Camera
