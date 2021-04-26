@@ -13,4 +13,8 @@ public class PlaySound : MonoBehaviour
         SFXManagerSingleton.SharedInstance.PlaySFX(soundName);
         Debug.Log(soundName);
     }
+
+    private void OnTriggerExit2D(Collider2D collision){
+        SFXManagerSingleton.SharedInstance.StopSFX(soundName);
+    }
 }

@@ -14,7 +14,6 @@ public class SFXManagerSingleton: MonoBehaviour
         }
     }
 
-   
 
     private void Awake()
     {
@@ -37,7 +36,6 @@ public class SFXManagerSingleton: MonoBehaviour
         Debug.LogFormat("Los audios son" + audios.Count);
     }
 
- 
     private List <GameObject> audios;
 
     public AudioSource FindAudioSource(SFXType.SoundType type)
@@ -52,8 +50,12 @@ public class SFXManagerSingleton: MonoBehaviour
         return null;//esto no se ejecutara nunca
     }
 
-    public  void PlaySFX(SFXType.SoundType type)
+    public void PlaySFX(SFXType.SoundType type)
     {
         FindAudioSource(type).Play();
+    }
+
+    public void StopSFX(SFXType.SoundType type){
+        FindAudioSource(type).Stop();
     }
 }
