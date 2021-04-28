@@ -14,26 +14,28 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingScreen, loadingIcon;
     public Text loadingText;
 
-    public void StartGame()
+    public void StartGame() //iniciar juego
     {
         //SceneManager.LoadScene(firstLevel);
         StartCoroutine(LoadStart());
     }
 
-public void OpenOptions()
+public void OpenOptions() //abrir menu opciones
     {
         optionsScreen.SetActive(true);
     }
 
-public void CloseOptions()
+public void CloseOptions() //cerrar menu opciones
     {
         optionsScreen.SetActive(false);
     }
 
-public void QuitGame()
+public void QuitGame() //salir del juego
     {
-        Application.Quit();
+        Application.Quit(); 
+        Debug.Log("Salir");
     }
+    
 
     //Coroutine for loading screen
     public IEnumerator LoadStart()
