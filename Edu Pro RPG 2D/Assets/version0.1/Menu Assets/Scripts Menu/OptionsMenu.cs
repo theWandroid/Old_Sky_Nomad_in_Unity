@@ -6,7 +6,8 @@ using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public Toggle fullscreenTog, vsyncTog;
+    //public Toggle fullscreenTog, vsyncTog;
+    public Toggle fullscreenTog;
 
     public ResItem[] resolutions;
 
@@ -27,14 +28,14 @@ public class OptionsMenu : MonoBehaviour
     {
         fullscreenTog.isOn = Screen.fullScreen;
 
-        if(QualitySettings.vSyncCount == 0)
+      /*  if(QualitySettings.vSyncCount == 0)
         {
             vsyncTog.isOn = false;
         }
         else
         {
             vsyncTog.isOn = true;
-        }
+        }*/
 
         //search for resolution in list
         bool foundRes = false;
@@ -77,12 +78,6 @@ public class OptionsMenu : MonoBehaviour
         sfxLabel.text = (sfxSlider.value + 80).ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ResLeft()
     {
         selectedResolution--;
@@ -114,7 +109,7 @@ public class OptionsMenu : MonoBehaviour
         //apply fullscreen
        // Screen.fullScreen = fullscreenTog.isOn;
 
-        if (vsyncTog.isOn)
+       /* if (vsyncTog.isOn)
         {
             QualitySettings.vSyncCount = 1;
 
@@ -122,7 +117,7 @@ public class OptionsMenu : MonoBehaviour
         else
         {
             QualitySettings.vSyncCount = 0;
-        }
+        }*/
 
         //set resolution
         Screen.SetResolution(resolutions[selectedResolution].horizontal, resolutions[selectedResolution].vertical, fullscreenTog.isOn);
