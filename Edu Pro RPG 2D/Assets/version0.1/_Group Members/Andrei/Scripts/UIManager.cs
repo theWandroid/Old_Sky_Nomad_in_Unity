@@ -13,7 +13,17 @@ public class UIManager : MonoBehaviour
     public HealthManager playerHealthManager;
     //public Image playerAvatar;
     public GameObject inventoryPanel;
+    public GameObject menuPanel;
     public Button inventoryButton;
+
+    private ObjectManager objectManager;
+
+    private void Start()
+    {
+        objectManager = FindObjectOfType<ObjectManager>();
+        inventoryPanel.SetActive(false);
+        menuPanel.SetActive(false);
+    }
 
 
     // Update is called once per frame
@@ -49,6 +59,7 @@ public class UIManager : MonoBehaviour
         //si esta activo devuelve True pero con ! se desactiva, de la misma manera al revés
 
         inventoryPanel.SetActive(!inventoryPanel.activeInHierarchy);
+        menuPanel.SetActive(!menuPanel.activeInHierarchy);
 
         if (inventoryPanel.activeInHierarchy)
         {
@@ -60,18 +71,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    /*
-    public void ChangeAvatarImage(Sprite sprite)
-    {
-        playerAvatar.sprite = sprite;
-    }
-    */
-
     public void FillInventory()
     {
-        ObjectManager manager = FindObjectOfType<ObjectManager>();
+        //ObjectManager manager = FindObjectOfType<ObjectManager>();
         //De esta manera recupero todos los objetos
-        List<GameObject> objetos = manager.GetAllObjects();
+        List<GameObject> objetos = objectManager.GetAllObjects();
         int i = 0;
         foreach (GameObject obj in objetos)
         {
@@ -86,15 +90,37 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowOnly(InventoryButton.ItemType type){
+    //para mostrar elementos de un cierto tipo
+    public void ShowOnly(int type){
         foreach (Transform t in inventoryPanel.transform)
         {
-            t.gameObject.SetActive(t.GetComponent<InventoryButton>().type == type);
+            t.gameObject.SetActive((int)t.GetComponent<InventoryButton>().type == type);
         }
     }
 
     public void ShowAll() {
+        foreach (Transform t in inventoryPanel.transform){
+            t.gameObject.SetActive(true);
+        }
     }
 
+    /*
+public void ChangeAvatarImage(Sprite sprite)
+{
+    playerAvatar.sprite = sprite;
+}
+*/
+
+    public void HealthChanged(){
+    
+    }
+
+    public void LevelChanged(){
+    
+    }
+
+    public void ExpChanged(){
+    
+    }
 
 }

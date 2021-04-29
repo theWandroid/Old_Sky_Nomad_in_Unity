@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
-    public enum ItemType { POTION, FRUIT, OTHER  }
+    public enum ItemType { POTION = 0, FOOD = 1, CLOTHES = 2, OTHER = 3 }
 
     public int itemIdx;
     public ItemType type;
