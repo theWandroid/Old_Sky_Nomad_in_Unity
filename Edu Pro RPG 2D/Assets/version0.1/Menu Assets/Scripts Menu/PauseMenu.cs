@@ -31,7 +31,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void PauseUnpause()
+    public void PauseUnpause() //bucle para pausar y quitar pausa
     {
         if (!isPaused)
         {
@@ -51,17 +51,17 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void OpenOptions()
+    public void OpenOptions() //abrir menu opciones
     {
         optionsScreen.SetActive(true);
     }
 
-    public void CloseOptions()
+    public void CloseOptions() //cerrar menu opciones
     {
         optionsScreen.SetActive(false);
     }
 
-    public void QuitToMain()
+    public void QuitToMain() //ir al menu principal
     {
         //SceneManager.LoadScene(mainMenuScene);
 
@@ -69,6 +69,7 @@ public class PauseMenu : MonoBehaviour
         //Time.timeScale = 1f;
 
         StartCoroutine(LoadMain());
+
     }
 
 
@@ -85,7 +86,7 @@ public class PauseMenu : MonoBehaviour
         {
             if(asyncLoad.progress >= .9f)
             {
-                loadingText.text = "Press any key to continue";
+                loadingText.text = "Pulsa cualquier tecla para continuar";
                 loadingIcon.SetActive(false);
 
                 if (Input.anyKeyDown)

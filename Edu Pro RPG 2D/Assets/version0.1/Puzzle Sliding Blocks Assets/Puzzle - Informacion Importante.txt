@@ -1,0 +1,17 @@
+Información Importante:
+
+IMPORTANTE 1:
+1. Las imagenes tienen que ser cuadradas, es decir 1000x1000, 500x500, 3250x3250, etc.
+2. Para poder poner una imagen en el puzzle en Unity desde el proyecto ir al sprite (imagen) que vamos a usar. 
+3. En el inspector darle a Advanced y activar la casilla Read/Write Enable.
+4. Darle a Apply.
+
+IMPORTANTE 2:
+- Para que se desordenen las piezas cuando le des a play pulsar clic izquierdo.
+
+//PENDIENTE LO SIGUIENTE (AL SER RANDOM A VECES UNA PARTE NO SE DESORDENA)
+IMPORTANTE 3 CALCULAR BLOCKS PER LINE Y SHUFFLE LENGTH (solo multiplos de 2):
+EJEMPLOS CALCULAR: 
+- 2 blocks per line son 10 shuffle length, 
+- 4 blocks per line son 20 shuffle length,
+- 6 block per line pueden ser 60 shuffle length,
