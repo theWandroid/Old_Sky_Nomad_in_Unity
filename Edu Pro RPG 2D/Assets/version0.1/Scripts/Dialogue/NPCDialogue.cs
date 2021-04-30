@@ -43,6 +43,7 @@ public class NPCDialogue : MonoBehaviour
             string[] finalDialogue = new string[npcDialogueLines.Length];
             //para cada linea de dialogo, recorro todas las lineas de dialogo
             int i = 0;
+
             foreach (string line in npcDialogueLines)
             {
                 finalDialogue[i++]= (npcName != null ? npcName + " \n" : "") + line;
