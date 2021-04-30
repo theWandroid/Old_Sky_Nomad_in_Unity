@@ -34,9 +34,9 @@ public class UIManager : MonoBehaviour
         {
             ToggleInventory();
         }
-
-        playerHealthBar.maxValue = playerHealthManager.maxHealth;
-        playerHealthBar.value = playerHealthManager.Health;
+        /*
+        //playerHealthBar.maxValue = playerHealthManager.maxHealth;
+        //playerHealthBar.value = playerHealthManager.Health;
 
         //StringBuilder funciona por el patron del contructor de programacion
         StringBuilder stringBuilder = new StringBuilder().
@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour
             Append(playerHealthManager.maxHealth);
         //Transformamos el stringBuider en texto porque es un objeto
         playerHealthText.text = stringBuilder.ToString();
+        */
     }
 
     //este metodo se encarga de canviar la imagen del avatar
