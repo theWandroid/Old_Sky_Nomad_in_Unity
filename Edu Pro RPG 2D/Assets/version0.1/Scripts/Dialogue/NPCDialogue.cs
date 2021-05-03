@@ -46,8 +46,18 @@ public class NPCDialogue : MonoBehaviour
 
             foreach (string line in npcDialogueLines)
             {
-                finalDialogue[i++]= (npcName != null ? npcName + " \n" : "") + line;
-               
+                /*
+                foreach (char character in line)
+                {
+                    finalDialogue[i++] = (npcName != null ? npcName + " \n" : "") + character + line;
+                    */
+                    finalDialogue[i++]= (npcName != null ? npcName + " \n" : "") +  line ;
+                    /*
+                    yield return new WaitForSeconds(0.5f);
+                
+                }
+                */
+
             }
 
             if (npcSprite != null)

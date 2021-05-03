@@ -22,6 +22,7 @@ public class QuestManager : MonoBehaviour
         {
             quests.Add(t.gameObject.GetComponent<Quest>());
         }
+        Debug.Log("Hay {0} quests." + quests.Count);
         
     }
 
