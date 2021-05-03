@@ -64,4 +64,33 @@ public void QuitGame() //salir del juego
             yield return null;
         }
     }
+
+    public void ConnectGoogle()
+    {
+        Debug.Log("Iniciando sesión con Google...");
+    }
+
+    public void SignIn()
+    {
+        Debug.Log("Iniciando sesión...");
+    }
+
+    public void SignUp()
+    {
+        Debug.Log("Registrandose...");
+    }
+
+    public void SkyNomadComments()
+    {
+        Debug.Log("Dejando Comentario...");
+    }
+
+    public void SkyNomadFacebook()
+    {
+        Debug.Log("Facebook de Sky-Nomad...");
+    }
+    public void SkyNomadInstagram()
+    {
+        Debug.Log("Instagram de Sky-Nomad...");
+    }
 }
