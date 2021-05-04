@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class ToggleTilemapCollider : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject outsideCollider;
+    public GameObject insideCollider;
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
