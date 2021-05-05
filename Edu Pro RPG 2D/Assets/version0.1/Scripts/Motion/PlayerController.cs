@@ -58,14 +58,14 @@ public class PlayerController : MonoBehaviour
             _animator.enabled = true;
         }
         //S = V*T
-        if (Mathf.Abs(Input.GetAxisRaw(AXIS_H)) > 0.2f)
+        if (Mathf.Abs(Input.GetAxisRaw(AXIS_H)) > 0.2f )
         {
             _rigidBody.velocity = new Vector2(Input.GetAxisRaw(AXIS_H) /** currentSpeed*/, _rigidBody.velocity.y).normalized * speed;
             walking = true;
             lastMovement = new Vector2(Input.GetAxisRaw(AXIS_H), 0);
 
         }
-        if (Mathf.Abs(Input.GetAxisRaw(AXIS_V)) > 0.2f)
+         if (Mathf.Abs(Input.GetAxisRaw(AXIS_V)) > 0.2f )
         {
             /*
             Vector3 translation = new Vector3(0, Input.GetAxis(AXIS_V) * speed * Time.deltaTime, 0);
@@ -77,7 +77,24 @@ public class PlayerController : MonoBehaviour
             lastMovement = new Vector2(0, Input.GetAxisRaw(AXIS_V));
 
         }
-
+        if (Mathf.Abs(Input.GetAxisRaw(AXIS_V)) < 0.2f)
+        {
+            /*
+            Vector3 translation = new Vector3(0, Input.GetAxis(AXIS_V) * speed * Time.deltaTime, 0);
+            this.transform.Translate(translation);
+            */
+            _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, 0).normalized * speed /**
+                currentSpeed*/ ;
+        }
+        if (Mathf.Abs(Input.GetAxisRaw(AXIS_H)) < 0.2f)
+        {
+            /*
+            Vector3 translation = new Vector3(0, Input.GetAxis(AXIS_V) * speed * Time.deltaTime, 0);
+            this.transform.Translate(translation);
+            */
+            _rigidBody.velocity = new Vector2(0, _rigidBody.velocity.y ).normalized * speed /**
+                currentSpeed*/ ;
+        }
     }
 
     private void LateUpdate()
