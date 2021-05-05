@@ -14,28 +14,26 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingScreen, loadingIcon;
     public Text loadingText;
 
-    public void StartGame() //iniciar juego
+    public void StartGame()
     {
         //SceneManager.LoadScene(firstLevel);
         StartCoroutine(LoadStart());
     }
 
-public void OpenOptions() //abrir menu opciones
+public void OpenOptions()
     {
         optionsScreen.SetActive(true);
     }
 
-public void CloseOptions() //cerrar menu opciones
+public void CloseOptions()
     {
         optionsScreen.SetActive(false);
     }
 
-public void QuitGame() //salir del juego
+public void QuitGame()
     {
-        Application.Quit(); 
-        Debug.Log("Salir");
+        Application.Quit();
     }
-    
 
     //Coroutine for loading screen
     public IEnumerator LoadStart()
@@ -63,34 +61,5 @@ public void QuitGame() //salir del juego
 
             yield return null;
         }
-    }
-
-    public void ConnectGoogle()
-    {
-        Debug.Log("Iniciando sesión con Google...");
-    }
-
-    public void SignIn()
-    {
-        Debug.Log("Iniciando sesión...");
-    }
-
-    public void SignUp()
-    {
-        Debug.Log("Registrandose...");
-    }
-
-    public void SkyNomadComments()
-    {
-        Debug.Log("Dejando Comentario...");
-    }
-
-    public void SkyNomadFacebook()
-    {
-        Debug.Log("Facebook de Sky-Nomad...");
-    }
-    public void SkyNomadInstagram()
-    {
-        Debug.Log("Instagram de Sky-Nomad...");
     }
 }
