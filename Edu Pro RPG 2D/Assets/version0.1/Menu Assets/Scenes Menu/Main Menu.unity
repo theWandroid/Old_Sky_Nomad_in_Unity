@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534f2c24e8116794d8d2cf571e165e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Pause Menu
+  firstLevel: town
   optionsScreen: {fileID: 405823551}
   loadingScreen: {fileID: 1248054875}
   loadingIcon: {fileID: 1248054874}
