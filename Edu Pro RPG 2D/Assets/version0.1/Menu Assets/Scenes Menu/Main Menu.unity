@@ -765,7 +765,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1512161143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 534f2c24e8116794d8d2cf571e165e83, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb3fd291e7bcc349937ae703c874a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firstLevel: town
