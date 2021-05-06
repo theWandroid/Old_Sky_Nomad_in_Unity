@@ -26,7 +26,7 @@ public class NPCMovement : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
-    public GameObject player;
+    private GameObject player;
     private SpriteRenderer _spriteRenderer;
 
 
@@ -42,6 +42,7 @@ public class NPCMovement : MonoBehaviour
         //como solo hay un objeto que contenga el DIalogueManager entonces usamos este metodo, dunciona porque solo hay uno
        dialogueManager = FindObjectOfType<DialogueManager>();
         //Debug.Log("Quiero jugar");
+        player = FindObjectOfType<PlayerController>().gameObject;
     }
 
     private void FixedUpdate()

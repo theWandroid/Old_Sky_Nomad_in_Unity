@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871010493325867803}
   m_Layer: 0
-  m_Name: NPC Manuela
+  m_Name: NPC Sara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   - "No parecia un avi\xF3n"
   - Tal vez fuera una nave alienigena
   npcSprite: {fileID: 0}
+  hasQuest: 0
 --- !u!1 &2811114076216583376
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +279,7 @@ MonoBehaviour:
   walkTime: 1.5
   waitTime: 4
   villagerZone: {fileID: 2811114076216583383}
+  player: {fileID: 0}
 --- !u!50 &2811114077176702132
 Rigidbody2D:
   serializedVersion: 4
@@ -312,6 +314,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.4047619, y: 0.6904762}
+  m_Offset: {x: 0, y: -0.14285713}
+  m_Size: {x: 0.4047619, y: 0.4047619}
   m_Direction: 0
