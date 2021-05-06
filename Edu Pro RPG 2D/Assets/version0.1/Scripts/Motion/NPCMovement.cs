@@ -26,7 +26,7 @@ public class NPCMovement : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
-    public GameObject Player;
+    public GameObject player;
     private SpriteRenderer _spriteRenderer;
 
 
@@ -47,10 +47,10 @@ public class NPCMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (Player.transform.position.y < this.transform.position.y)
+        if (player.transform.position.y < this.transform.position.y)
         {
             _spriteRenderer.sortingOrder = 5;
-        }else if (Player.transform.position.y > this.transform.position.y)
+        }else if (player.transform.position.y > this.transform.position.y)
         {
             _spriteRenderer.sortingOrder = 15;
         }
