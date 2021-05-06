@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private const string WALK = "Walking";
     private const string LAST_H = "Last_H";
     private const string LAST_V = "Last_V";
+    private SpriteRenderer m_SpriteRenderer;
 
     //public Vector2 facingDirection = Vector2.zero;
 
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+
         _animator = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody2D>();
 
@@ -45,6 +48,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (isTalking)
         {
             _rigidBody.velocity = Vector2.zero;
