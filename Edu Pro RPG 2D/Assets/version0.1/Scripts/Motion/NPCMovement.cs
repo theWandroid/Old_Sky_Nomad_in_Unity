@@ -26,12 +26,14 @@ public class NPCMovement : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
+    private GameObject player;
+    private SpriteRenderer _spriteRenderer;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         waitCounter = waitTime;
@@ -40,10 +42,19 @@ public class NPCMovement : MonoBehaviour
         //como solo hay un objeto que contenga el DIalogueManager entonces usamos este metodo, dunciona porque solo hay uno
        dialogueManager = FindObjectOfType<DialogueManager>();
         //Debug.Log("Quiero jugar");
+        player = FindObjectOfType<PlayerController>().gameObject;
     }
 
     private void FixedUpdate()
     {
+
+        if (player.transform.position.y < this.transform.position.y)
+        {
+            _spriteRenderer.sortingOrder = 5;
+        }else if (player.transform.position.y > this.transform.position.y)
+        {
+            _spriteRenderer.sortingOrder = 15;
+        }
        
         //si estoy hablando y el manager dice que ya hemos acabado de hablar, así reducimos las veces que tenemos que pasar por aqui
         if (isTalking && !dialogueManager.dialogueActive)
