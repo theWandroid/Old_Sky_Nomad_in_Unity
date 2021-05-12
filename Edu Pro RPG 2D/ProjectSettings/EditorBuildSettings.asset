@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/version0.1/_Group Members/Andrei/Scenes/Interior casas.unity
     guid: dacacb673ff7c9946aec17eb3664743c
-  - enabled: 1
+  - enabled: 0
     path: Assets/version0.1/_Group Members/Andrei/Scenes/Pueblo.unity
     guid: d2d3df6027cab144693102654ad5a142
-  - enabled: 1
+  - enabled: 0
     path: Assets/version0.1/Menu Assets/Scenes Menu/Main Menu.unity
     guid: 8e033f6b3fb54424c8864b81780ae102
-  - enabled: 1
+  - enabled: 0
     path: Assets/version0.1/Menu Assets/Scenes Menu/Pause Menu.unity
     guid: 7abd3b58c0908f84d933f35112184598
-  - enabled: 1
+  - enabled: 0
     path: Assets/version0.1/Menu Assets/Scenes Menu/Pause Setup.unity
     guid: 40a9bf50ba2764143815d4bab775c7cd
   - enabled: 1
