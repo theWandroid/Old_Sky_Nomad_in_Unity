@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -52
+  m_SortingOrder: 0
   m_Sprite: {fileID: 4326335289255806755, guid: b987ae2c265274347bc8fe9c6b39c8b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -189,8 +189,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.4047619, y: 0.7380952}
+  m_Offset: {x: 0, y: -0.16666669}
+  m_Size: {x: 0.4047619, y: 0.4047619}
   m_Direction: 0
 --- !u!1 &6760656220746682409
 GameObject:

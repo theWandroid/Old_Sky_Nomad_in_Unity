@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/version0.1/Scenes/version 0.1/town.unity
     guid: 2fc39b1215385dd4586f2cf764b78abf
+  - enabled: 1
+    path: Assets/version0.1/_Group Members/Mireia/interior casa.unity
+    guid: 3afa09cc6ccb98344b7c3cd590cfcf2c
+  - enabled: 1
+    path: Assets/version0.1/_Group Members/Mireia/miescena.unity
+    guid: 22ed6e3a9a8801d42ad70ce4ce45cb9e
   m_configObjects: {}
