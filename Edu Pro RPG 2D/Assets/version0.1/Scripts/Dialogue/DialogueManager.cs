@@ -16,12 +16,19 @@ public class DialogueManager : MonoBehaviour
 
     private PlayerController playerController;
 
+    private GameObject joystick;
+    private GameObject handle;
+
     private void Start()
     {
         dialogueActive = false;
         dialogueBox.SetActive(false);
         //localizo al player por su variable
         playerController = FindObjectOfType<PlayerController>();
+
+        joystick = GameObject.Find("Joystick");
+        handle = GameObject.Find("Handle");
+
     }
     // Update is called once per frame
     void Update()
@@ -44,6 +51,8 @@ public class DialogueManager : MonoBehaviour
                 avatarImage.enabled = false;
                 dialogueBox.SetActive(false);
                 playerController.isTalking = false;
+                joystick.gameObject.GetComponent<Image>().enabled = true;
+                handle.gameObject.GetComponent<Image>().enabled = true;
 
             }
             else
@@ -63,6 +72,8 @@ public class DialogueManager : MonoBehaviour
         //dialogueText.text = text;
         dialogueText.text = dialogueLines[currentDialogueLine];
         playerController.isTalking = true;
+        joystick.gameObject.GetComponent<Image>().enabled =false;
+        handle.gameObject.GetComponent<Image>().enabled = false;
     }
 
     public void ShowDialogue(string [] lines, Sprite sprite)

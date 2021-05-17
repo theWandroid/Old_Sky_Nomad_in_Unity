@@ -25,13 +25,26 @@ public class Quest : MonoBehaviour
     public List<int> numberOfEnemies;
 
     public Quest nextQuest;
+
+    public bool confirmacion;
+
+    private UIManager uIManager;
+
+    public string questScene;
+
     // Start is called before the first frame update
-   /*
-    private void OnEnable(int level)
+
+    private void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        
     }
-   */
+
+    /*
+     private void OnEnable(int level)
+     {
+         SceneManager.sceneLoaded += OnSceneLoaded;
+     }
+    */
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -51,6 +64,7 @@ public class Quest : MonoBehaviour
     public void StartQuest()
     {
         //SFXManagerSingleton.SharedInstance.PlaySFX(SFXType.SoundType.M_START);
+        uIManager = FindObjectOfType<UIManager>();
         questManager = FindObjectOfType<QuestManager>();
         questManager.ShowQuestText(title + "\n" + startText);
 
@@ -62,6 +76,11 @@ public class Quest : MonoBehaviour
         if (killsEnemy)
         {
             ActivateEnemies();
+        }
+
+        if (confirmacion)
+        {
+            ActivateConfirmacion();
         }
 
     }
@@ -118,6 +137,12 @@ public class Quest : MonoBehaviour
         nextQuest.StartQuest();
     }
 
+    void ActivateConfirmacion()
+    {
+        uIManager.ActiveConfirmacion();
+    }
+
+
     private void Update()
     {
         if(needsItem && questManager.itemCollected != null)
@@ -170,5 +195,18 @@ public class Quest : MonoBehaviour
             }
         }
     }
+
+
+    public void AcceptQuest()
+    {
+        Debug.Log("Ha aceptado la misión");
+        SceneManager.LoadScene(questScene);
+    }
+
+    public void DenyQuest()
+    {
+        Debug.Log("No ha aceptado la misión");
+    }
+
 }
 

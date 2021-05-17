@@ -18,9 +18,12 @@ public class UIManager : MonoBehaviour
 
     private ObjectManager objectManager;
 
+    public GameObject confirmationPannel;
+
     private void Start()
     {
         objectManager = FindObjectOfType<ObjectManager>();
+        confirmationPannel.SetActive(false);
         inventoryPanel.SetActive(false);
         menuPanel.SetActive(false);
     }
@@ -70,6 +73,12 @@ public class UIManager : MonoBehaviour
             }
             FillInventory();
         }
+    }
+
+
+    public void ActiveConfirmacion()
+    {
+        confirmationPannel.SetActive(true);
     }
 
     public void FillInventory()
