@@ -48,28 +48,82 @@ public class FirebaseManager : MonoBehaviour
             Destroy(gameObject);
             instance = this;
         }
+    }
 
+    private void Start()
+    {
+        //Iniciar coroutina
+        StartCoroutine(CheckAndFixDependencies());
+    }
     //Verificar y corregir las dependencias de Firebase y una vez finalizado recibir el resultado y almacenarlo en una variable
-    FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(checkDependancyTask => {
-        var dependencyStatus = checkDependancyTask.Result;
-        if (dependencyStatus == DependencyStatus.Available) //Si el resultado estaba disponible, inicializa Firebase
+    private IEnumerator CheckAndFixDependencies()
+        {
+            var checkAndFixDependanciesTask = FirebaseApp.CheckAndFixDependenciesAsync();
+          //Esperar hasta que la tarea esté completada
+        yield return new WaitUntil(predicate: () => checkAndFixDependanciesTask.IsCompleted);
+        //obtener resultado
+        var dependancyResult = checkAndFixDependanciesTask.Result;
+        //inicializar firebase
+        if(dependancyResult == DependencyStatus.Available)
         {
             InitializeFirebase();
         }
-        else //En caso de no estar disponible deoura el error
+       
+        else
         {
-            Debug.LogError($"Could not resolve all Firebase dependencies: {dependencyStatus}");
+            //En caso de haber algún error dar un Debug.Log
+            Debug.LogError($"No se han podido resolver todas las dependencias de Firebase: {dependancyResult}");
         }
-    });
-    }
+        }
 
     private void InitializeFirebase() //Al iniciar Firebase establecer la referencia de Autenticación en la instancia predeterminada
     {
         auth = FirebaseAuth.DefaultInstance;
+        StartCoroutine(CheckAutoLogin());
 
         auth.StateChanged += AuthStateChanged;
         AuthStateChanged(this, null);
     }
+
+    private IEnumerator CheckAutoLogin()
+    {
+        yield return new WaitForEndOfFrame();
+        //verificar si hay un usuario
+        if (user != null)
+        {
+            var reloadUserTask = user.ReloadAsync();
+            yield return new WaitUntil(predicate: () => reloadUserTask.IsCompleted);
+            AutoLogin();
+        }
+        else
+        {
+            //Si no hay usuario enviarlo a la pagina de login
+            AuthUIManager.instance.LoginScreen();
+        }
+    }
+    
+    private void AutoLogin()
+    {
+      
+        if(user != null)
+        {
+            //Ver si está verificado
+            if (user.IsEmailVerified) 
+            { 
+            //Si está el Email Verificado Cambiar a la escena
+            GameManager.instance.ChangeScene(1);
+            }
+            //Si no enviar Email de verificación{
+            StartCoroutine(SendVerificationEmail());
+        }
+        else
+        {
+            //Si no hay usuario enviarlo a la pagina de login
+            AuthUIManager.instance.LoginScreen();
+        }
+    }
+
+ 
 
     private void AuthStateChanged(object sender, System.EventArgs eventArgs)
     {
@@ -146,18 +200,17 @@ public class FirebaseManager : MonoBehaviour
         }
         else
         {
-            //si no hay excepciones significa que ha iniciado sesión correctamente
+            //Si no hay excepciones significa que ha iniciado sesión correctamente
             if (user.IsEmailVerified)
             {
                 yield return new WaitForSeconds(1f);
-                GameManager.instance.ChangeScene(1); //cambiar a la escena del lobby
+                //Cambiar a la escena del lobby
+                GameManager.instance.ChangeScene(1); 
             }
-            
             else
             {
-                //TODO: Enviar Email Verificación
-                //Temporalmente mandarlos al lobby
-                GameManager.instance.ChangeScene(1);
+                //Enviar Email Verificación
+                StartCoroutine(SendVerificationEmail());
             }
         }
         
@@ -167,7 +220,7 @@ public class FirebaseManager : MonoBehaviour
     {
         if(_username == "")
         {
-            registerOutputText.text = "Introduce Un Nombre De Usuario";
+            registerOutputText.text = "Porfavor Introduce Un Nombre De Usuario";
         }
         else if(_password != _confirmPassword)
         {
@@ -236,10 +289,45 @@ public class FirebaseManager : MonoBehaviour
                 {
                     Debug.Log($"Usuario Firebase Creado Con Éxito: {user.DisplayName} ({user.UserId})");
 
-                    //TODO: Enviar Email Verificación
+                    //Enviar Email Verificación
+                    StartCoroutine(SendVerificationEmail());
                 }
             }
         
+        }
+    }
+    //Enviar correo de verificacion
+    private IEnumerator SendVerificationEmail()
+    {
+        //comprobar si hay un usuario
+        if(user != null)
+        {
+            var emailTask = user.SendEmailVerificationAsync();
+            yield return new WaitUntil(predicate: () => emailTask.IsCompleted);
+            if(emailTask.Exception != null)
+            {
+                FirebaseException firebaseException = (FirebaseException)emailTask.Exception.GetBaseException();
+                AuthError error = (AuthError)firebaseException.ErrorCode;
+
+                string output = "Error Desconocido, Intentalo de Nuevo";
+                switch (error)
+                {
+                    case AuthError.Cancelled:
+                        output = "Tarea de Verificación ha sido cancelada";
+                        break;
+                    case AuthError.InvalidRecipientEmail:
+                        output = "Email Invalido";
+                        break;
+                    case AuthError.TooManyRequests:
+                        output = "Demasiadas Peticiones";
+                        break;
+                }
+                //Llamar a la espera de verificación porque no se ha enviado un email
+                AuthUIManager.instance.AwaitVerification(false, user.Email, output);
+                //si no hay errores se envió correctamente.
+                AuthUIManager.instance.AwaitVerification(true, user.Email, null);
+                Debug.Log("Email Enviado Con Éxito");
+            }
         }
     }
 }
