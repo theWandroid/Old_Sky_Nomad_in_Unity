@@ -26,18 +26,13 @@ public class Quest : MonoBehaviour
 
     public Quest nextQuest;
 
-    public bool confirmacion;
+    public bool needsConfirmation;
 
     private UIManager uIManager;
 
     public string questScene;
 
-    // Start is called before the first frame update
-
-    private void Start()
-    {
-        
-    }
+   
 
     /*
      private void OnEnable(int level)
@@ -78,9 +73,9 @@ public class Quest : MonoBehaviour
             ActivateEnemies();
         }
 
-        if (confirmacion)
+        if (needsConfirmation)
         {
-            ActivateConfirmacion();
+            ActivateConfirmation();
         }
 
     }
@@ -137,7 +132,7 @@ public class Quest : MonoBehaviour
         nextQuest.StartQuest();
     }
 
-    void ActivateConfirmacion()
+    void ActivateConfirmation()
     {
         uIManager.ActiveConfirmacion();
     }

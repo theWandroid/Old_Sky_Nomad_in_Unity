@@ -78,6 +78,7 @@ public class UIManager : MonoBehaviour
 
     public void ActiveConfirmacion()
     {
+        Debug.Log("Se ha activado el panel de confirmación.");
         confirmationPannel.SetActive(true);
     }
 
