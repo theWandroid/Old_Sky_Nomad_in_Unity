@@ -27,9 +27,11 @@ public class AuthUIManager : MonoBehaviour
         }else if(instance != this)
         {
             Destroy(gameObject);
+            Debug.Log("Instance already exists, destroying object!");
         }
     }
 
+    //Funciones para cambiar la interfaz de usuario de la pantalla de inicio de sesión
     public void ClearUI()
     {
         FirebaseManager.instance.ClearOutputs();
@@ -40,19 +42,19 @@ public class AuthUIManager : MonoBehaviour
 
     }
 
-    public void LoginScreen()
+    public void LoginScreen() //Botón Login
     {
         ClearUI();
         loginUI.SetActive(true);
     }
 
-    public void RegisterScreen()
+    public void RegisterScreen()// Botón Registro
     {
         ClearUI();
         registerUI.SetActive(true);
     }
 
-    //Esperando Verificación
+    //Función de Esperando Verificación
     public void AwaitVerification(bool _emailSent, string _email, string _output)
     {
         ClearUI();
