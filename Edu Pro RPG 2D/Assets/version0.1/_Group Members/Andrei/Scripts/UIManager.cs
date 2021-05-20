@@ -134,4 +134,9 @@ public void ChangeAvatarImage(Sprite sprite)
     
     }
 
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
