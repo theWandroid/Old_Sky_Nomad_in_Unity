@@ -12,13 +12,22 @@ public class SelectCharacter : MonoBehaviour
 
     public TextMeshProUGUI text;
 
+    public GameObject loadingScreen, loadingIcon;
+    public TextMeshProUGUI loadingText;
+    public string townScene;
+    public GameObject selectPlayerPanel;
+
+
     public Button nextButton;
+
 
     public Button previousButton;
 
     public Image playerImage;
 
     private int num;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +77,8 @@ public class SelectCharacter : MonoBehaviour
             text.text = characterChoice;
             PlayerPrefs.GetInt("personajeEscogido", 0);
             Debug.Log("Se ha escogido a " +PlayerPrefs.GetInt("personajeEscogido", 0));
-            SceneManager.LoadScene("town");
+            //SceneManager.LoadScene("town");
+            StartCoroutine(LoadMain());
         }
        
         else
@@ -77,5 +87,34 @@ public class SelectCharacter : MonoBehaviour
         }
 
     
+    }
+
+
+    public IEnumerator LoadMain()
+    {
+        loadingScreen.SetActive(true);
+        selectPlayerPanel.SetActive(false);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(townScene);
+
+        asyncLoad.allowSceneActivation = false;
+
+        while (!asyncLoad.isDone)
+        {
+            if (asyncLoad.progress >= .9f)
+            {
+                loadingText.text = "Pulsa cualquier tecla para continuar";
+                loadingIcon.SetActive(false);
+
+                if (Input.anyKeyDown)
+                {
+                    asyncLoad.allowSceneActivation = true;
+
+                    Time.timeScale = 1f;
+                }
+            }
+
+            yield return null;
+        }
     }
 }
