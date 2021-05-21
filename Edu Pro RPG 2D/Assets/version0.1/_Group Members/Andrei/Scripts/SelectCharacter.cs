@@ -64,21 +64,24 @@ public class SelectCharacter : MonoBehaviour
             if (num == 0)
             {
                 characterChoice = "Has escogido a la mujer";
+                Debug.Log("Has escogido a la mujer");
             }
             else if (num == 1)
             {
                 characterChoice = "Has escogido al viejo";
+                Debug.Log("Has escogido al viejo");
             }
             else if (num == 2)
             {
                 characterChoice = "Has escogido al/la caballer@";
+                Debug.Log("Has escogido a caballer@");
             }
             PlayerPrefs.SetInt("personajeEscogido", num);
             text.text = characterChoice;
             PlayerPrefs.GetInt("personajeEscogido", 0);
             Debug.Log("Se ha escogido a " +PlayerPrefs.GetInt("personajeEscogido", 0));
-            //SceneManager.LoadScene("town");
-            StartCoroutine(LoadMain());
+            SceneManager.LoadScene("town");
+           /* StartCoroutine(LoadMain());*/
         }
        
         else
@@ -90,7 +93,7 @@ public class SelectCharacter : MonoBehaviour
     }
 
 
-    public IEnumerator LoadMain()
+   /* public IEnumerator LoadMain()
     {
         loadingScreen.SetActive(true);
         selectPlayerPanel.SetActive(false);
@@ -116,5 +119,5 @@ public class SelectCharacter : MonoBehaviour
 
             yield return null;
         }
-    }
+    }*/
 }
