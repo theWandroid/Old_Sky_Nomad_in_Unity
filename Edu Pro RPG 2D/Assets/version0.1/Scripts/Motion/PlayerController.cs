@@ -43,12 +43,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
-
         _animator = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody2D>();
-
         joystick = GameObject.Find("Controller");
-
         playerCreated = true;
         nextUuid = "origin";
         isTalking = false;
@@ -135,7 +132,10 @@ public class PlayerController : MonoBehaviour
             lastMovement = new Vector2(0, CrossPlatformInputManager.GetAxis(AXIS_V));
         }
 
-
+        if (CrossPlatformInputManager.GetButton("action"))
+        {
+            Debug.Log("El jugador ha pulado el boton");
+        }
 
     }
 

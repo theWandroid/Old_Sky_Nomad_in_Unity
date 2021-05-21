@@ -32,12 +32,12 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+/*
         if (Input.GetKeyDown(KeyCode.I))
         {
             ToggleInventory();
         }
-        /*
+        
         //playerHealthBar.maxValue = playerHealthManager.maxHealth;
         //playerHealthBar.value = playerHealthManager.Health;
 

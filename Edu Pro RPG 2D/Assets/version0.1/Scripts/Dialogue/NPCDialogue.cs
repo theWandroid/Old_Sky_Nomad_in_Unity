@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class NPCDialogue : MonoBehaviour
@@ -22,7 +23,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerInTheZone && Input.GetMouseButtonDown(1)){
+        if(playerInTheZone && CrossPlatformInputManager.GetButton("action")){
             /*
             string finalDialogue;
             if (npcName != null)
@@ -82,6 +83,7 @@ public class NPCDialogue : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             playerInTheZone = true;
+            Debug.Log("El jugador esta en la zona");
         }
     }
 
@@ -89,7 +91,9 @@ public class NPCDialogue : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+
             playerInTheZone = false;
+            Debug.Log("El jugador ya no esta en la zona");
         }
     }
 }

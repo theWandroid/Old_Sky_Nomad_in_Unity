@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueBox;
@@ -33,33 +34,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialogueActive && Input.GetKeyDown(KeyCode.Space))
-        {
-            //cada vez que pulsamos espacio se pasa a la siguiente linea de dialogo
-            currentDialogueLine++;
-            /*
-            dialogueActive = false;
-            avatarImage.enabled = false;
-            dialogueBox.SetActive(false);
-            */
         
-            //si la linea actual es mayor o igual que las lineas de dialogo
-            if (currentDialogueLine>= dialogueLines.Length)
-            {
-                currentDialogueLine = 0;
-                dialogueActive = false;
-                avatarImage.enabled = false;
-                dialogueBox.SetActive(false);
-                playerController.isTalking = false;
-                joystick.gameObject.GetComponent<Image>().enabled = true;
-                handle.gameObject.GetComponent<Image>().enabled = true;
-
-            }
-            else
-            {
-                dialogueText.text = dialogueLines[currentDialogueLine];
-            }
-        }
 
     }
 
@@ -81,5 +56,31 @@ public class DialogueManager : MonoBehaviour
         ShowDialogue(lines);
         avatarImage.enabled = true;
         avatarImage.sprite = sprite;
+    }
+
+
+    public void NextLine()
+    {
+            currentDialogueLine++;
+            /*
+            dialogueActive = false;
+            avatarImage.enabled = false;
+            dialogueBox.SetActive(false);
+            */
+            //si la linea actual es mayor o igual que las lineas de dialogo
+            if (currentDialogueLine >= dialogueLines.Length)
+            {
+                currentDialogueLine = 0;
+                dialogueActive = false;
+                avatarImage.enabled = false;
+                dialogueBox.SetActive(false);
+                playerController.isTalking = false;
+                joystick.gameObject.GetComponent<Image>().enabled = true;
+                handle.gameObject.GetComponent<Image>().enabled = true;
+            }
+            else
+            {
+                dialogueText.text = dialogueLines[currentDialogueLine];
+            }
     }
 }

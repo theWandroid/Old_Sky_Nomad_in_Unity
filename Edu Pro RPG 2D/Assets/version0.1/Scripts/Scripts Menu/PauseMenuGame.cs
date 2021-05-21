@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenuGame : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PauseMenuGame : MonoBehaviour
     private bool isPaused;
 
     public GameObject loadingScreen, loadingIcon;
-    public Text loadingText;
+    public TextMeshProUGUI loadingText;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,7 @@ public class PauseMenuGame : MonoBehaviour
     {
         optionsScreen.SetActive(false);
     }
+
 
     public void QuitToMain() //ir al menu principal
     {

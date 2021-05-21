@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/version0.1/Scenes/version 0.1/ConnectGame.unity
-    guid: d84b1a0f6b5106c48a8d0737cb508c48
+    path: Assets/version0.1/Menu Assets/Scenes Menu/Connect.unity
+    guid: df05611b4c27acc4588e3341f85396cf
   - enabled: 1
-    path: Assets/version0.1/Scenes/version 0.1/Main Menu Game.unity
-    guid: 51c5eed1af9995b45a7b241957775e20
+    path: Assets/version0.1/Menu Assets/Scenes Menu/Main Menu.unity
+    guid: 8e033f6b3fb54424c8864b81780ae102
+  - enabled: 1
+    path: Assets/version0.1/Menu Assets/Scenes Menu/Pause Menu.unity
+    guid: 7abd3b58c0908f84d933f35112184598
+  - enabled: 1
+    path: Assets/version0.1/Menu Assets/Scenes Menu/Pause Setup.unity
+    guid: 40a9bf50ba2764143815d4bab775c7cd
+  - enabled: 1
+    path: Assets/version0.1/Scenes/version 0.1/Select Player.unity
+    guid: 94049c038951c06499e1c495d32a0d84
   - enabled: 1
     path: Assets/version0.1/Scenes/version 0.1/town.unity
     guid: 2fc39b1215385dd4586f2cf764b78abf
