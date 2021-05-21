@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb3fd291e7bcc349937ae703c874a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: town
+  firstLevel: Select Player
   optionsScreen: {fileID: 405823551}
   loadingScreen: {fileID: 1248054875}
   loadingIcon: {fileID: 1248054874}

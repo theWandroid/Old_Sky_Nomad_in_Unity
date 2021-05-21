@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
             lastMovement = new Vector2(0, CrossPlatformInputManager.GetAxis(AXIS_V));
         }
 
-        if (CrossPlatformInputManager.GetButton("action"))
+        if (CrossPlatformInputManager.GetButtonDown("Action"))
         {
             Debug.Log("El jugador ha pulado el boton");
         }

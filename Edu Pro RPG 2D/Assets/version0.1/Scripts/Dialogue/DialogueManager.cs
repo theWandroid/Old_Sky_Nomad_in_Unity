@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 
 public class DialogueManager : MonoBehaviour
@@ -19,6 +20,10 @@ public class DialogueManager : MonoBehaviour
 
     private GameObject joystick;
     private GameObject handle;
+    private GameObject actionButton;
+
+    private GameObject continueButton;
+
 
     private void Start()
     {
@@ -29,13 +34,44 @@ public class DialogueManager : MonoBehaviour
 
         joystick = GameObject.Find("Joystick");
         handle = GameObject.Find("Handle");
+        actionButton = GameObject.Find("Action Button");
+        continueButton = GameObject.Find("Continue Button");
+        continueButton.SetActive(false);
 
     }
     // Update is called once per frame
     void Update()
     {
-        
 
+        if (CrossPlatformInputManager.GetButtonDown("Continue"))
+        {
+            Debug.Log("Se ha detectado la pulsación");
+
+        currentDialogueLine++;
+        /*
+        dialogueActive = false;
+        avatarImage.enabled = false;
+        dialogueBox.SetActive(false);
+        */
+        //si la linea actual es mayor o igual que las lineas de dialogo
+        if (currentDialogueLine >= dialogueLines.Length)
+        {
+            currentDialogueLine = 0;
+            dialogueActive = false;
+            avatarImage.enabled = false;
+            dialogueBox.SetActive(false);
+            playerController.isTalking = false;
+            joystick.gameObject.GetComponent<Image>().enabled = true;
+            handle.gameObject.GetComponent<Image>().enabled = true;
+            actionButton.GetComponent<Image>().enabled = true;
+            continueButton.SetActive(false);
+
+
+        }
+        else
+        {
+            dialogueText.text = dialogueLines[currentDialogueLine];
+        }}
     }
 
     public void ShowDialogue(string [] lines)
@@ -47,8 +83,10 @@ public class DialogueManager : MonoBehaviour
         //dialogueText.text = text;
         dialogueText.text = dialogueLines[currentDialogueLine];
         playerController.isTalking = true;
-        joystick.gameObject.GetComponent<Image>().enabled =false;
-        handle.gameObject.GetComponent<Image>().enabled = false;
+        joystick.GetComponent<Image>().enabled =false;
+        handle.GetComponent<Image>().enabled = false;
+        actionButton.GetComponent<Image>().enabled = false;
+        continueButton.SetActive(true);
     }
 
     public void ShowDialogue(string [] lines, Sprite sprite)
@@ -57,30 +95,20 @@ public class DialogueManager : MonoBehaviour
         avatarImage.enabled = true;
         avatarImage.sprite = sprite;
     }
-
-
-    public void NextLine()
+    /*
+    private void DesactiveControls()
     {
-            currentDialogueLine++;
-            /*
-            dialogueActive = false;
-            avatarImage.enabled = false;
-            dialogueBox.SetActive(false);
-            */
-            //si la linea actual es mayor o igual que las lineas de dialogo
-            if (currentDialogueLine >= dialogueLines.Length)
-            {
-                currentDialogueLine = 0;
-                dialogueActive = false;
-                avatarImage.enabled = false;
-                dialogueBox.SetActive(false);
-                playerController.isTalking = false;
-                joystick.gameObject.GetComponent<Image>().enabled = true;
-                handle.gameObject.GetComponent<Image>().enabled = true;
-            }
-            else
-            {
-                dialogueText.text = dialogueLines[currentDialogueLine];
-            }
+        joystick.SetActive(false);
+        handle.SetActive(false);
+        actionButton.SetActive(false);
+    
     }
+
+    private void ActiveControls()
+    {
+        joystick.SetActive(true);
+        handle.SetActive(true);
+        actionButton.SetActive(true);
+    }
+    */
 }

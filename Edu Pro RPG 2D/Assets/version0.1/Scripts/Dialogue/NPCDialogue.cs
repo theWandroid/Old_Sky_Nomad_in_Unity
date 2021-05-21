@@ -23,7 +23,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerInTheZone && CrossPlatformInputManager.GetButton("action")){
+        if(playerInTheZone && CrossPlatformInputManager.GetButtonDown("Action")){
             /*
             string finalDialogue;
             if (npcName != null)
