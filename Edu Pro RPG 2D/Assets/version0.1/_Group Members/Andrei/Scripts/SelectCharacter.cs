@@ -12,13 +12,22 @@ public class SelectCharacter : MonoBehaviour
 
     public TextMeshProUGUI text;
 
+    public GameObject loadingScreen, loadingIcon;
+    public TextMeshProUGUI loadingText;
+    public string townScene;
+    public GameObject selectPlayerPanel;
+
+
     public Button nextButton;
+
 
     public Button previousButton;
 
     public Image playerImage;
 
     private int num;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,20 +64,24 @@ public class SelectCharacter : MonoBehaviour
             if (num == 0)
             {
                 characterChoice = "Has escogido a la mujer";
+                Debug.Log("Has escogido a la mujer");
             }
             else if (num == 1)
             {
                 characterChoice = "Has escogido al viejo";
+                Debug.Log("Has escogido al viejo");
             }
             else if (num == 2)
             {
                 characterChoice = "Has escogido al/la caballer@";
+                Debug.Log("Has escogido a caballer@");
             }
             PlayerPrefs.SetInt("personajeEscogido", num);
             text.text = characterChoice;
             PlayerPrefs.GetInt("personajeEscogido", 0);
             Debug.Log("Se ha escogido a " +PlayerPrefs.GetInt("personajeEscogido", 0));
             SceneManager.LoadScene("town");
+           /* StartCoroutine(LoadMain());*/
         }
        
         else
@@ -78,4 +91,33 @@ public class SelectCharacter : MonoBehaviour
 
     
     }
+
+
+   /* public IEnumerator LoadMain()
+    {
+        loadingScreen.SetActive(true);
+        selectPlayerPanel.SetActive(false);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(townScene);
+
+        asyncLoad.allowSceneActivation = false;
+
+        while (!asyncLoad.isDone)
+        {
+            if (asyncLoad.progress >= .9f)
+            {
+                loadingText.text = "Pulsa cualquier tecla para continuar";
+                loadingIcon.SetActive(false);
+
+                if (Input.anyKeyDown)
+                {
+                    asyncLoad.allowSceneActivation = true;
+
+                    Time.timeScale = 1f;
+                }
+            }
+
+            yield return null;
+        }
+    }*/
 }
