@@ -27,12 +27,14 @@ public class SelectCharacter : MonoBehaviour
 
     private int num;
 
+    private Image _image;
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerImage.sprite = characters[0];
+        _image = this.gameObject.GetComponent<Image>();
         Debug.Log(num);
     }
 
@@ -63,25 +65,24 @@ public class SelectCharacter : MonoBehaviour
             string characterChoice = "";
             if (num == 0)
             {
-                characterChoice = "Has escogido a la mujer";
                 Debug.Log("Has escogido a la mujer");
             }
             else if (num == 1)
             {
-                characterChoice = "Has escogido al viejo";
                 Debug.Log("Has escogido al viejo");
             }
             else if (num == 2)
             {
-                characterChoice = "Has escogido al/la caballer@";
                 Debug.Log("Has escogido a caballer@");
             }
+
+            characterChoice = "Tu selección esta hecha";
             PlayerPrefs.SetInt("personajeEscogido", num);
             text.text = characterChoice;
             PlayerPrefs.GetInt("personajeEscogido", 0);
             Debug.Log("Se ha escogido a " +PlayerPrefs.GetInt("personajeEscogido", 0));
             SceneManager.LoadScene("town");
-           /* StartCoroutine(LoadMain());*/
+          StartCoroutine(LoadMain());
         }
        
         else
@@ -93,10 +94,11 @@ public class SelectCharacter : MonoBehaviour
     }
 
 
-   /* public IEnumerator LoadMain()
+   public IEnumerator LoadMain()
     {
         loadingScreen.SetActive(true);
         selectPlayerPanel.SetActive(false);
+        _image.color = new Color32(0, 0, 0, 0);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(townScene);
 
@@ -106,7 +108,8 @@ public class SelectCharacter : MonoBehaviour
         {
             if (asyncLoad.progress >= .9f)
             {
-                loadingText.text = "Pulsa cualquier tecla para continuar";
+                loadingText.text = "Pulsa para continuar";
+                PlayerPrefs.GetInt("personajeEscogido", 0);
                 loadingIcon.SetActive(false);
 
                 if (Input.anyKeyDown)
@@ -119,5 +122,5 @@ public class SelectCharacter : MonoBehaviour
 
             yield return null;
         }
-    }*/
+    }
 }
