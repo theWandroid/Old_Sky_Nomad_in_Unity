@@ -26,12 +26,16 @@ public class NPCMovement : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
+    private GameObject player;
+    private SpriteRenderer _spriteRenderer;
+
+    Vector2 destination = Vector2.zero;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         waitCounter = waitTime;
@@ -40,10 +44,57 @@ public class NPCMovement : MonoBehaviour
         //como solo hay un objeto que contenga el DIalogueManager entonces usamos este metodo, dunciona porque solo hay uno
        dialogueManager = FindObjectOfType<DialogueManager>();
         //Debug.Log("Quiero jugar");
+        player = FindObjectOfType<PlayerController>().gameObject;
+
+        destination = this.transform.position;
     }
 
     private void FixedUpdate()
     {
+
+        /*
+
+        //Calculamos el nuevo punto  donde ahy que ir en base a la variable destino
+        Vector2 newPos = Vector2.MoveTowards(this.transform.position, destination, speed);
+        //USamos el rigidbody para transportar a Pacman hasta dicha posicion
+        GetComponent<Rigidbody2D>().MovePosition(newPos);
+
+        float distanceToDestination = Vector2.Distance((Vector2)this.transform.position, destination);
+
+        //tenemos hacer casting a Vector2 ya que los Vectores de posición por defecto son Vector3
+        if (distanceToDestination < 1)
+        {
+            if (Input.GetKey(KeyCode.UpArrow) && CanMoveTo(Vector2.up))
+            {
+                destination = (Vector2)this.transform.position + Vector2.up;
+            }
+
+            if (Input.GetKey(KeyCode.RightArrow) && CanMoveTo(Vector2.right))
+            {
+                destination = (Vector2)this.transform.position + Vector2.right;
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow) && CanMoveTo(Vector2.down))
+            {
+                destination = (Vector2)this.transform.position + Vector2.down;
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow) && CanMoveTo(Vector2.left))
+            {
+                destination = (Vector2)this.transform.position + Vector2.left;
+            }
+        }
+       
+
+        Vector2 dir = destination - (Vector2)this.transform.position;
+ */
+        if (player.transform.position.y < this.transform.position.y)
+        {
+            _spriteRenderer.sortingOrder = 5;
+        }else if (player.transform.position.y > this.transform.position.y)
+        {
+            _spriteRenderer.sortingOrder = 15;
+        }
        
         //si estoy hablando y el manager dice que ya hemos acabado de hablar, así reducimos las veces que tenemos que pasar por aqui
         if (isTalking && !dialogueManager.dialogueActive)
@@ -119,5 +170,32 @@ public class NPCMovement : MonoBehaviour
         isWalking = false;
         waitCounter = waitTime;
         _rigidBody.velocity = Vector2.zero;
+    }
+
+    //metodo que dada una posible direccion de movimiento
+    //devuelve true si podemos ir en dicha dirección y false si algo nos impode avanzar
+    bool CanMoveTo(Vector2 dir)
+    {
+        //hacemos que se dibuje una linea desde la posicion de Pacman hacia la posicion donde quiere ir
+        Vector2 pacmanPos = this.transform.position;
+        //de esta manera se chequera desde el punto al que nos  dirgimos hacia el interior de pacman, la linea sale des de donde quiero ir hacia pacman, trazamos una linea desde donde quiero ir hacia pacman
+        //lo hacemos de esta manera para ver que el raycast no choque contra el de pacman al principio, de esta manera solo chocara contra el collider de pacman si no hay ningún otro collider  delante
+        RaycastHit2D hit = Physics2D.Linecast(pacmanPos + dir, pacmanPos);
+
+        Collider2D pacmanCollider = GetComponent<Collider2D>();
+        Collider2D hitCollider = hit.collider;
+
+        if (hitCollider == pacmanCollider)
+        {
+            //no tengo nada más en medio --> puedo moverme allí
+            return true;
+        }
+        else
+        {
+            //tengo un collider delante que NO es el de pacman --> no puedo moverme
+            return false;
+        }
+        // return hit.collider == GetComponent<Collider2D>();
+
     }
 }
