@@ -18,9 +18,12 @@ public class UIManager : MonoBehaviour
 
     private ObjectManager objectManager;
 
+    public GameObject confirmationPannel;
+
     private void Start()
     {
         objectManager = FindObjectOfType<ObjectManager>();
+        confirmationPannel.SetActive(false);
         inventoryPanel.SetActive(false);
         menuPanel.SetActive(false);
     }
@@ -29,12 +32,12 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+/*
         if (Input.GetKeyDown(KeyCode.I))
         {
             ToggleInventory();
         }
-        /*
+        
         //playerHealthBar.maxValue = playerHealthManager.maxHealth;
         //playerHealthBar.value = playerHealthManager.Health;
 
@@ -70,6 +73,13 @@ public class UIManager : MonoBehaviour
             }
             FillInventory();
         }
+    }
+
+
+    public void ActiveConfirmacion()
+    {
+        Debug.Log("Se ha activado el panel de confirmación.");
+        confirmationPannel.SetActive(true);
     }
 
     public void FillInventory()
@@ -124,4 +134,9 @@ public void ChangeAvatarImage(Sprite sprite)
     
     }
 
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
