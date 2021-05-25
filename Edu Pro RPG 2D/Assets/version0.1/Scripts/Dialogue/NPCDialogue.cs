@@ -14,6 +14,7 @@ public class NPCDialogue : MonoBehaviour
     private bool playerInTheZone;
     public bool hasQuest;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,8 +81,12 @@ public class NPCDialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        PlayerController playerController;
+
         if (collision.gameObject.tag.Equals("Player"))
         {
+            playerController = collision.gameObject.GetComponent<PlayerController>();
+            Debug.Log(playerController.lastMovement);
             playerInTheZone = true;
             Debug.Log("El jugador esta en la zona");
         }
@@ -91,7 +96,6 @@ public class NPCDialogue : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-
             playerInTheZone = false;
             Debug.Log("El jugador ya no esta en la zona");
         }
