@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using TMPro;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class NPCDialogue : MonoBehaviour
@@ -14,15 +15,21 @@ public class NPCDialogue : MonoBehaviour
     private bool playerInTheZone;
     public bool hasQuest;
 
+    public TextMeshProUGUI npcDialogoName;
+
+
+    public PlayerController playerController;
+
 
     // Start is called before the first frame update
     void Start()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
+        playerController =  FindObjectOfType<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         if(playerInTheZone && CrossPlatformInputManager.GetButtonDown("Action")){
             /*
@@ -42,6 +49,7 @@ public class NPCDialogue : MonoBehaviour
 
 
             Debug.Log("Voy a hablar");
+
             string[] finalDialogue = new string[npcDialogueLines.Length];
             //para cada linea de dialogo, recorro todas las lineas de dialogo
             int i = 0;
@@ -53,7 +61,7 @@ public class NPCDialogue : MonoBehaviour
                 {
                     finalDialogue[i++] = (npcName != null ? npcName + " \n" : "") + character + line;
                     */
-                    finalDialogue[i++]= (npcName != null ? npcName + " \n" : "") +  line ;
+                    finalDialogue[i++]=  line ;
                     /*
                     yield return new WaitForSeconds(0.5f);
                 
@@ -81,13 +89,12 @@ public class NPCDialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController playerController;
 
         if (collision.gameObject.tag.Equals("Player"))
         {
-            playerController = collision.gameObject.GetComponent<PlayerController>();
-            Debug.Log(playerController.lastMovement);
             playerInTheZone = true;
+            npcDialogoName.text = npcName;
+            //playerController.playerCapCol.isTrigger = true;
             Debug.Log("El jugador esta en la zona");
         }
     }
@@ -97,6 +104,8 @@ public class NPCDialogue : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             playerInTheZone = false;
+            //playerController.playerCapCol.isTrigger = false;
+
             Debug.Log("El jugador ya no esta en la zona");
         }
     }
