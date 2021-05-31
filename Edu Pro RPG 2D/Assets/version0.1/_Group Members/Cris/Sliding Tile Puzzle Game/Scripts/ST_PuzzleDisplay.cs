@@ -4,90 +4,90 @@ using System.Collections.Generic;
 
 public class ST_PuzzleDisplay : MonoBehaviour 
 {
-	// this puzzle texture.
+	// esta textura de rompecabezas.
 	public Texture PuzzleImage;
 
-	// the width and height of the puzzle in tiles.
+	// el ancho y alto del rompecabezas en mosaicos (tiles).
 	public int Height = 3;
 	public int Width  = 3;
 
-	// additional scaling value.
+	// valor de escala adicional.
 	public Vector3 PuzzleScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-	// additional positioning offset.
+	// desplazamiento de posicionamiento adicional (offset).
 	public Vector3 PuzzlePosition = new Vector3(0.0f, 0.0f, 0.0f);
 
-	// seperation value between puzzle tiles.
+	// valor de separación entre fichas de rompecabezas.
 	public float SeperationBetweenTiles = 0.5f;
 
-	// the tile display object.
+	// el objeto de visualización de mosaico (tile).
 	public GameObject Tile;
 
-	// the shader used to render the puzzle.
+	// el sombreador (shader) utilizado para renderizar el rompecabezas.
 	public Shader PuzzleShader;
 
-	// array of the spawned tiles.
+	// matriz (array) de los mosaicos generados.
 	private GameObject[,] TileDisplayArray;
 	private List<Vector3>  DisplayPositions = new List<Vector3>();
 
-	// position and scale values.
+	// valores de posición y escala.
 	private Vector3 Scale;
 	private Vector3 Position;
 
-	// has the puzzle been completed?
+	// ¿Se ha completado el rompecabezas?
 	public bool Complete = false;
 
-	// Use this for initialization
+	// Use esto para la inicialización 
 	void Start () 
 	{
-		// create the games puzzle tiles from the provided image.
+		// crea los mosaicos del rompecabezas del juego a partir de la imagen proporcionada.
 		CreatePuzzleTiles();
 
-		// mix up the puzzle.
+		// mezcla el rompecabezas.
 		StartCoroutine(JugglePuzzle());
 
 	}
-	
-	// Update is called once per frame
+
+	// La actualización (Update) se llama una vez por fotograma
 	void Update () 
 	{
-		// move the puzzle to the position set in the inspector.
+		// mueve el rompecabezas a la posición establecida en el inspector.
 		this.transform.localPosition = PuzzlePosition;
 
-		// set the scale of the entire puzzle object as set in the inspector.
+		// establece la escala de todo el objeto del rompecabezas como se establece en el inspector.
 		this.transform.localScale = PuzzleScale;
 	}
 
 	public Vector3 GetTargetLocation(ST_PuzzleTile thisTile)
 	{
-		// check if we can move this tile and get the position we can move to.
+		// verificamos si podemos mover esta ficha y obtener la posición a la que podemos movernos.
 		ST_PuzzleTile MoveTo = CheckIfWeCanMove((int)thisTile.GridLocation.x, (int)thisTile.GridLocation.y, thisTile);
 
 		if(MoveTo != thisTile)
 		{
-			// get the target position for this new tile.
+			// obtén la posición de destino (target) para este nuevo mosaico.
 			Vector3 TargetPos = MoveTo.TargetPosition;
 			Vector2 GridLocation = thisTile.GridLocation;
 			thisTile.GridLocation = MoveTo.GridLocation;
 
-			// move the empty tile into this tiles current position.
+			// mueve la ficha (tile) vacía a la posición actual de esta ficha.
 			MoveTo.LaunchPositionCoroutine(thisTile.TargetPosition);
 			MoveTo.GridLocation = GridLocation;
 
-			// return the new target position.
+			// devuelve la nueva posición (target) de destino.
 			return TargetPos;
 		}
 
-		// else return the tiles actual position (no movement).
+		// de lo contrario, devuelve la posición real de las fichas (sin movimiento). 
 		return thisTile.TargetPosition;
 	}
 
 	private ST_PuzzleTile CheckMoveLeft(int Xpos, int Ypos, ST_PuzzleTile thisTile)
 	{
-		// move left 
-		if((Xpos - 1)  >= 0)
+		// mover hacia la izquierda
+		if ((Xpos - 1)  >= 0)
 		{
-			// we can move left, is the space currently being used?
+			// podemos movernos a la izquierda, ¿se está utilizando el espacio actualmente?
 			return GetTileAtThisGridLocation(Xpos - 1, Ypos, thisTile);
 		}
 		
@@ -96,10 +96,10 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	
 	private ST_PuzzleTile CheckMoveRight(int Xpos, int Ypos, ST_PuzzleTile thisTile)
 	{
-		// move right 
-		if((Xpos + 1)  < Width)
+		// moverse a la derecha 
+		if ((Xpos + 1)  < Width)
 		{
-			// we can move right, is the space currently being used?
+			// podemos movernos a la derecha, ¿se está utilizando el espacio actualmente?
 			return GetTileAtThisGridLocation(Xpos + 1, Ypos , thisTile);
 		}
 		
@@ -108,10 +108,10 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	
 	private ST_PuzzleTile CheckMoveDown(int Xpos, int Ypos, ST_PuzzleTile thisTile)
 	{
-		// move down 
-		if((Ypos - 1)  >= 0)
+		// mover hacia abajo
+		if ((Ypos - 1)  >= 0)
 		{
-			// we can move down, is the space currently being used?
+			// podemos movernos hacia abajo, ¿se está utilizando el espacio actualmente?
 			return GetTileAtThisGridLocation(Xpos, Ypos  - 1, thisTile);
 		}
 		
@@ -120,10 +120,10 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	
 	private ST_PuzzleTile CheckMoveUp(int Xpos, int Ypos, ST_PuzzleTile thisTile)
 	{
-		// move up 
-		if((Ypos + 1)  < Height)
+		// mover hacia arriba 
+		if ((Ypos + 1)  < Height)
 		{
-			// we can move up, is the space currently being used?
+			// podemos movernos hacia arriba, ¿se está utilizando el espacio actualmente?
 			return GetTileAtThisGridLocation(Xpos, Ypos  + 1, thisTile);
 		}
 		
@@ -132,8 +132,8 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	
 	private ST_PuzzleTile CheckIfWeCanMove(int Xpos, int Ypos, ST_PuzzleTile thisTile)
 	{
-		// check each movement direction
-		if(CheckMoveLeft(Xpos, Ypos, thisTile) != thisTile)
+		// comprobar cada dirección de movimiento
+		if (CheckMoveLeft(Xpos, Ypos, thisTile) != thisTile)
 		{
 			return CheckMoveLeft(Xpos, Ypos, thisTile);
 		}
@@ -162,13 +162,13 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		{
 			for(int i = 0; i < Width; i++)
 			{
-				// check if this tile has the correct grid display location.
-				if((TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().GridLocation.x == x)&&
+				// verifica si este mosaico tiene la ubicación de visualización de cuadrícula (grid) correcta.
+				if ((TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().GridLocation.x == x)&&
 				   (TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().GridLocation.y == y))
 				{
 					if(TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().Active == false)
 					{
-						// return this tile active property. 
+						// devuelve esta propiedad activa de mosaico. 
 						return TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>();
 					}
 				}
@@ -182,19 +182,19 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1.0f);
 
-		// hide a puzzle tile (one is always missing to allow the puzzle movement).
+		// esconde una ficha de rompecabezas (siempre falta una para permitir el movimiento del rompecabezas).
 		TileDisplayArray[0,0].GetComponent<ST_PuzzleTile>().Active = false;
 
 		yield return new WaitForSeconds(1.0f);
 
 		for(int k = 0; k < 20; k++)
 		{
-			// use random to position each puzzle section in the array delete the number once the space is filled.
-			for(int j = 0; j < Height; j++)
+			// usar random para colocar cada sección del rompecabezas en la matriz (array) elimine el número una vez que se llene el espacio.
+			for (int j = 0; j < Height; j++)
 			{
 				for(int i = 0; i < Width; i++)
-				{		
-					// attempt to execute a move for this tile.
+				{
+					// intenta ejecutar un movimiento para esta ficha.
 					TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().ExecuteAdditionalMove();
 
 					yield return new WaitForSeconds(0.02f);
@@ -202,7 +202,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 			}
 		}
 
-		// continually check for the correct answer.
+		// verifica continuamente la respuesta correcta.
 		StartCoroutine(CheckForComplete());
 
 		yield return null;
@@ -212,14 +212,14 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	{
 		while(Complete == false)
 		{
-			// iterate over all the tiles and check if they are in the correct position.
+			// itera sobre todos los mosaicos y comprueba si están en la posición correcta.
 			Complete = true;
 			for(int j = Height - 1; j >= 0; j--)
 			{
 				for(int i = 0; i < Width; i++)
 				{
-					// check if this tile has the correct grid display location.
-					if(TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().CorrectLocation == false)  
+					// verifica si este mosaico tiene la ubicación de visualización de cuadrícula (grid) correcta.
+					if (TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().CorrectLocation == false)  
 					{
 						Complete = false;
 					}
@@ -228,11 +228,12 @@ public class ST_PuzzleDisplay : MonoBehaviour
 
 			yield return null;
 		}
-				
-		// if we are still complete then all the tiles are correct.
-		if(Complete)
+
+		// si todavía estamos completos, entonces todos los mosaicos son correctos.
+		if (Complete)
 		{
-			Debug.Log("Puzzle Complete!");
+			// puzzle completado correctamente
+			Debug.Log("Puzzle Completado!");
 		}
 
 		yield return null;
@@ -243,8 +244,8 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		int WidthIndex = index;
 		int HeightIndex = 0;
 
-		// take the index value and return the grid array location X,Y.
-		for(int i = 0; i < Height; i++)
+		// toma el valor del índice y devuelve la ubicación de la matriz de cuadrícula X, Y.
+		for (int i = 0; i < Height; i++)
 		{
 			if(WidthIndex < Width)
 			{
@@ -262,58 +263,58 @@ public class ST_PuzzleDisplay : MonoBehaviour
 
 	private void CreatePuzzleTiles()
 	{
-		// using the width and height variables create an array.
+		// usando las variables de ancho y alto crea una matriz (array).
 		TileDisplayArray = new GameObject[Width,Height];
 
-		// set the scale and position values for this puzzle.
+		// establece los valores de escala y posición para este rompecabezas.
 		Scale = new Vector3(1.0f/Width, 1.0f, 1.0f/Height);
 		Tile.transform.localScale = Scale;
 
-		// used to count the number of tiles and assign each tile a correct value.
+		// se usa para contar el número de mosaicos y asignar a cada mosaico un valor correcto.
 		int TileValue = 0;
 
-		// spawn the tiles into an array.
-		for(int j = Height - 1; j >= 0; j--)
+		// genera los mosaicos en una matriz (array).
+		for (int j = Height - 1; j >= 0; j--)
 		{
 			for(int i = 0; i < Width; i++)
 			{
-				// calculate the position of this tile all centred around Vector3(0.0f, 0.0f, 0.0f).
+				// calcula la posición de este mosaico centrado alrededor de Vector3 (0.0f, 0.0f, 0.0f). 
 				Position = new Vector3(((Scale.x * (i + 0.5f))-(Scale.x * (Width/2.0f))) * (10.0f + SeperationBetweenTiles), 
 				                       0.0f, 
 				                      ((Scale.z * (j + 0.5f))-(Scale.z * (Height/2.0f))) * (10.0f + SeperationBetweenTiles));
 
-				// set this location on the display grid.
+				// establece esta ubicación en la cuadrícula de visualización (display grid).
 				DisplayPositions.Add(Position);
 
-				// spawn the object into play.
+				// genera el objeto en juego.
 				TileDisplayArray[i,j] = Instantiate(Tile, new Vector3(0.0f, 0.0f, 0.0f) , Quaternion.Euler(90.0f, -180.0f, 0.0f)) as GameObject;
 				TileDisplayArray[i,j].gameObject.transform.parent = this.transform;
 
-				// set and increment the display number counter.
+				// establece e incrementa el contador de números de pantalla.
 				ST_PuzzleTile thisTile = TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>();
 				thisTile.ArrayLocation = new Vector2(i,j);
 				thisTile.GridLocation = new Vector2(i,j);
 				thisTile.LaunchPositionCoroutine(Position);
 				TileValue++;
 
-				// create a new material using the defined shader.
+				// crea un nuevo material usando el sombreador (shader) definido.
 				Material thisTileMaterial = new Material(PuzzleShader);
 
-				// apply the puzzle image to it.
+				// aplica la imagen del rompecabezas.
 				thisTileMaterial.mainTexture = PuzzleImage;
-					
-				// set the offset and tile values for this material.
+
+				// establece los valores de desplazamiento y mosaico para este material.
 				thisTileMaterial.mainTextureOffset = new Vector2(1.0f/Width * i, 1.0f/Height * j);
 				thisTileMaterial.mainTextureScale  = new Vector2(1.0f/Width, 1.0f/Height);
-					
-				// assign the new material to this tile for display.
+
+				// asigna el nuevo material a este mosaico para su visualización.
 				TileDisplayArray[i,j].GetComponent<Renderer>().material = thisTileMaterial;
 			}
 		}
 
 		/*
-		// Enable an impossible puzzle for fun!
-		// switch the second and third grid location textures.
+		// ¡Habilita un rompecabezas imposible para divertirte!
+		// cambia las texturas de ubicación de la segunda y tercera cuadrícula. 
 		Material thisTileMaterial2 = TileDisplayArray[1,3].GetComponent<Renderer>().material;
 		Material thisTileMaterial3 = TileDisplayArray[2,3].GetComponent<Renderer>().material;
 		TileDisplayArray[1,3].GetComponent<Renderer>().material = thisTileMaterial3;
