@@ -3,52 +3,52 @@ using System.Collections;
 
 public class ST_PuzzleTile : MonoBehaviour 
 {
-	// the target position for this tile.
+	// la posición (target) de destino para este mosaico (tile).
 	public Vector3 TargetPosition;
 
-	// is this an active tile?  usually one per game is inactive.
+	// ¿Es esta una ficha activa? normalmente uno por juego está inactivo.
 	public bool Active = true;
 
-	// is this tile in the correct location?
+	// ¿Está este mosaico en la ubicación correcta?
 	public bool CorrectLocation = false;
 
-	// store this tiles array location.
+	// almacena la ubicación de esta matriz de mosaicos.
 	public Vector2 ArrayLocation = new Vector2();
 	public Vector2 GridLocation = new Vector2();
 
 	void Awake()
 	{
-		// assign the new target position.
+		// asigna la nueva posición de destino.
 		TargetPosition = this.transform.localPosition;
 
-		// start the movement coroutine to always move the objects to the new target position.
+		// inicia la corrutina de movimiento para mover siempre los objetos a la nueva posición de destino.
 		StartCoroutine(UpdatePosition());
 	}
 
 	public  void LaunchPositionCoroutine(Vector3 newPosition)
 	{
-		// assign the new target position.
+		// asigna la nueva posición de destino.
 		TargetPosition = newPosition;
 
-		// start the movement coroutine to always move the objects to the new target position.
+		// inicia la corrutina de movimiento para mover siempre los objetos a la nueva posición de destino.
 		StartCoroutine(UpdatePosition());
 	}
 
 	public IEnumerator UpdatePosition()
 	{
-		// whilst we are not at our target position.
-		while(TargetPosition != this.transform.localPosition)
+		// mientras no estemos en nuestra posición objetivo.
+		while (TargetPosition != this.transform.localPosition)
 		{
-			// lerp towards our target.
+			// lerp hacia nuestro objetivo.
 			this.transform.localPosition = Vector3.Lerp(this.transform.localPosition, TargetPosition, 10.0f * Time.deltaTime);
 			yield return null;
 		}
 
-		// after each move check if we are now in the correct location.
-		if(ArrayLocation == GridLocation){CorrectLocation = true;}else{CorrectLocation = false;}
+		// después de cada movimiento, verificamos si ahora estamos en la ubicación correcta.
+		if (ArrayLocation == GridLocation){CorrectLocation = true;}else{CorrectLocation = false;}
 
-		// if we are not an active tile then hide our renderer and collider.
-		if(Active == false)
+		// si no somos un mosaico activo entonces ocultamos nuestro renderizador y colisionador.
+		if (Active == false)
 		{
 			this.GetComponent<Renderer>().enabled = false;
 			this.GetComponent<Collider>().enabled = false;
@@ -59,13 +59,13 @@ public class ST_PuzzleTile : MonoBehaviour
 
 	public void ExecuteAdditionalMove()
 	{
-		// get the puzzle display and return the new target location from this tile. 
+		// obtén la pantalla del rompecabezas (puzzle display) y devuelve la nueva ubicación (target) de destino de este mosaico (tile).
 		LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
 	}
 
 	void OnMouseDown()
 	{
-		// get the puzzle display and return the new target location from this tile. 
+		// obtén la pantalla del rompecabezas (puzzle display) y devuelve la nueva ubicación (target) de destino de este mosaico (tile).
 		LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
 	}
 }
