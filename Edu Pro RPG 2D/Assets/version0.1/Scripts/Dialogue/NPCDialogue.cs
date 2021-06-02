@@ -88,7 +88,8 @@ void Update()
                 {
                     Debug.Log("La mision existe!");
                     questStart.SetActive(true);
-                    dialogueManager.ShowDialogue( , npcSprite);
+                    string questLine = theQuest.startText;
+                   // dialogueManager.ShowDialogue( questLine, npcSprite);
                 
                 }
             
