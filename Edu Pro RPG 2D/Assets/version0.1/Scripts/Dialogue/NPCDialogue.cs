@@ -13,7 +13,12 @@ public class NPCDialogue : MonoBehaviour
 
     private DialogueManager dialogueManager;
     private bool playerInTheZone;
+
+
     public bool hasQuest;
+    public int questId;
+    public QuestManager questManager;
+    public GameObject questStart;
 
     public TextMeshProUGUI npcDialogoName;
 
@@ -26,6 +31,7 @@ public class NPCDialogue : MonoBehaviour
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
         playerController =  FindObjectOfType<PlayerController>();
+        questStart.SetActive(false);
     }
 
 // Update is called once per frame
@@ -70,13 +76,26 @@ void Update()
 
             }
 
-            if (npcSprite != null)
+            if (npcSprite != null && !hasQuest)
             {
                 dialogueManager.ShowDialogue(finalDialogue, npcSprite);
             }
-            else 
-            { 
-            dialogueManager.ShowDialogue(finalDialogue);
+            else if (hasQuest)
+            {
+                Debug.Log("Tengo una mison para ti");
+                Quest theQuest = questManager.QuestWithID(questId);
+                if (theQuest != null)
+                {
+                    Debug.Log("La mision existe!");
+                    questStart.SetActive(true);
+                    dialogueManager.ShowDialogue( , npcSprite);
+                
+                }
+            
+            }
+            else
+            {
+                dialogueManager.ShowDialogue(finalDialogue);
             }
 
             //Si el NPCMovement del padre no es nulo, es decir que si el padre tiene el componente NPCMovement
@@ -84,6 +103,8 @@ void Update()
             {//entonces modificamos la variable del Componente padre y idicamos que esta hablando
                 gameObject.GetComponentInParent<NPCMovement>().isTalking = true;
             }
+
+
         }
     }
 
