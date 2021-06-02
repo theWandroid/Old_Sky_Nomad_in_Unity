@@ -18,19 +18,43 @@ public class NPCMovement : MonoBehaviour
     public float waitTime = 4.0f;
     private float waitCounter;
 
+    
+
     private Vector2[] walkingDirections = { Vector2.up, Vector2.down, Vector2.right, Vector2.left };
-    private Vector2 forbiddenDirection;
+
+    private const string LAST_H = "Last_H";
+    private const string LAST_V = "Last_V";
+
+    public Vector2 facingDirection = Vector2.zero;
     private int currentDirection;
 
     public BoxCollider2D villagerZone;
 
     private DialogueManager dialogueManager;
 
-    private GameObject player;
+    private PlayerController playerController;
     private SpriteRenderer _spriteRenderer;
 
     Vector2 destination = Vector2.zero;
+    private CapsuleCollider2D _collider;
+    private List<Vector2> permittedDirections = new List<Vector2>{ Vector2.up, Vector2.down, Vector2.right, Vector2.left };
 
+    private Vector3 lastPositon;
+    private Vector3 currentPosition;
+
+    private enum directions
+    {
+        up,
+        down,
+        left,
+        right
+    }
+
+
+    private Vector2 directionChoice;
+
+    float distanciaRayo;
+    int direccion;
 
     // Start is called before the first frame update
     void Start()
@@ -41,57 +65,27 @@ public class NPCMovement : MonoBehaviour
         waitCounter = waitTime;
         walkCounter = walkTime;
         isTalking = false;
+        _collider = this.GetComponent<CapsuleCollider2D>();
+
         //como solo hay un objeto que contenga el DIalogueManager entonces usamos este metodo, dunciona porque solo hay uno
        dialogueManager = FindObjectOfType<DialogueManager>();
         //Debug.Log("Quiero jugar");
-        player = FindObjectOfType<PlayerController>().gameObject;
+        playerController = FindObjectOfType<PlayerController>();
 
         destination = this.transform.position;
+
+        float margerRayo = 0.2f;
+        distanciaRayo = _collider.size.x / 2 + margerRayo;
     }
 
     private void FixedUpdate()
     {
-
-        /*
-
-        //Calculamos el nuevo punto  donde ahy que ir en base a la variable destino
-        Vector2 newPos = Vector2.MoveTowards(this.transform.position, destination, speed);
-        //USamos el rigidbody para transportar a Pacman hasta dicha posicion
-        GetComponent<Rigidbody2D>().MovePosition(newPos);
-
-        float distanceToDestination = Vector2.Distance((Vector2)this.transform.position, destination);
-
-        //tenemos hacer casting a Vector2 ya que los Vectores de posición por defecto son Vector3
-        if (distanceToDestination < 1)
-        {
-            if (Input.GetKey(KeyCode.UpArrow) && CanMoveTo(Vector2.up))
-            {
-                destination = (Vector2)this.transform.position + Vector2.up;
-            }
-
-            if (Input.GetKey(KeyCode.RightArrow) && CanMoveTo(Vector2.right))
-            {
-                destination = (Vector2)this.transform.position + Vector2.right;
-            }
-
-            if (Input.GetKey(KeyCode.DownArrow) && CanMoveTo(Vector2.down))
-            {
-                destination = (Vector2)this.transform.position + Vector2.down;
-            }
-
-            if (Input.GetKey(KeyCode.LeftArrow) && CanMoveTo(Vector2.left))
-            {
-                destination = (Vector2)this.transform.position + Vector2.left;
-            }
-        }
-       
-
-        Vector2 dir = destination - (Vector2)this.transform.position;
- */
-        if (player.transform.position.y < this.transform.position.y)
+        permittedDirections = new List<Vector2> { Vector2.up, Vector2.down, Vector2.right, Vector2.left };
+    
+        if (playerController.gameObject.transform.position.y < this.transform.position.y)
         {
             _spriteRenderer.sortingOrder = 5;
-        }else if (player.transform.position.y > this.transform.position.y)
+        }else if (playerController.gameObject.transform.position.y > this.transform.position.y)
         {
             _spriteRenderer.sortingOrder = 15;
         }
@@ -108,21 +102,70 @@ public class NPCMovement : MonoBehaviour
             // si el DialogueManager idica que el dialogo esta activo isTalking será igual true, sino será false
             isTalking = dialogueManager.dialogueActive;
             StopWalking();
+            if (playerController.lastMovement == new Vector2(1, 0))
+            {
+                Debug.Log("El jugador esta mirando hacia la derecha");
+               facingDirection = new Vector2(-1, 0);
+            }
+            else if (playerController.lastMovement == new Vector2(-1, 0))
+            {
+                Debug.Log("El jugador esta mirando hacia la izquierda");
+
+                facingDirection = new Vector2(1, 0);
+            }
+            else if (playerController.lastMovement == new Vector2(0, -1))
+            {
+                Debug.Log("El jugador esta mirando hacia arriba");
+
+                facingDirection = new Vector2(0, 1);
+            }
+            else if (playerController.lastMovement == new Vector2(0, 1))
+            {
+                Debug.Log("El jugador esta mirando hacia abajo");
+
+                facingDirection = new Vector2(0, -1);
+            }
             return;
         }
 
 
         if (isWalking)
         {
-            if(this.transform.position.x < villagerZone.bounds.min.x ||
-                this.transform.position.x > villagerZone.bounds.max.x ||
-                this.transform.position.y < villagerZone.bounds.min.y ||
-                this.transform.position.y > villagerZone.bounds.max.y)
+            if(this.transform.position.x < villagerZone.bounds.min.x +0.3||
+                this.transform.position.x > villagerZone.bounds.max.x - 0.3 ||
+                this.transform.position.y < villagerZone.bounds.min.y + 0.3||
+                this.transform.position.y > villagerZone.bounds.max.y -0.3 )
+            {
+                permittedDirections.Remove(permittedDirections[currentDirection]);
+                currentDirection = Random.Range(0, permittedDirections.Count);
+                StopWalking();
+            } 
+            
+           
+            
+            Vector2 puntoOrigen= new Vector2(this.transform.position.x, this.transform.position.y);
+            //creamos un Raycast
+            RaycastHit2D hitAbajo = Physics2D.Raycast(transform.position, permittedDirections[currentDirection], 0.2f);
+            //con el método Draw se dibuja una línea infinita
+
+            Debug.Log(hitAbajo);
+
+
+            if (hitAbajo.collider != null)
+            {
+                _rigidBody.velocity = permittedDirections[currentDirection] * speed;
+                facingDirection = permittedDirections[currentDirection];
+                Debug.DrawRay(puntoOrigen, permittedDirections[currentDirection], Color.green);
+
+                Debug.Log("Voy a andar");
+            } else if (hitAbajo.collider == null)
             {
                 StopWalking();
+                Debug.Log("Me paro");
+                Debug.DrawRay(puntoOrigen, permittedDirections[currentDirection], Color.red);
 
             }
-            _rigidBody.velocity = walkingDirections[currentDirection] * speed;
+
             walkCounter -= Time.fixedDeltaTime;
             //Debug.Log("Estoy andando");
             if (walkCounter < 0)
@@ -144,58 +187,47 @@ public class NPCMovement : MonoBehaviour
             }
         }
 
+
+
     }
 
     private void LateUpdate()
     {
         _animator.SetBool("Walking", isWalking);
-        _animator.SetFloat("Horizontal", walkingDirections[currentDirection].x);
-        _animator.SetFloat("Vertical", walkingDirections[currentDirection].y);
+        _animator.SetFloat("Horizontal", permittedDirections[currentDirection].x);
+        _animator.SetFloat("Vertical", permittedDirections[currentDirection].y);
+
+        _animator.SetFloat(LAST_H, facingDirection.x);
+        _animator.SetFloat(LAST_V, facingDirection.y);
+        
+
     }
 
-   
+
 
     public void StartWalking()
     {
-        currentDirection = Random.Range(0, walkingDirections.Length);
+
+        Debug.Log(permittedDirections.Count);
+        currentDirection = Random.Range(0, permittedDirections.Count);
         
         isWalking = true;
         walkCounter = walkTime;
+        currentPosition = transform.position;
         //Debug.Log("Empiezo a andar");
     }
 
     public void StopWalking()
     {
         //Debug.Log("ME paro");
+
         isWalking = false;
         waitCounter = waitTime;
         _rigidBody.velocity = Vector2.zero;
+        lastPositon = transform.position;
+        _animator.SetFloat(LAST_H, facingDirection.x);
+        _animator.SetFloat(LAST_V, facingDirection.y);
     }
 
-    //metodo que dada una posible direccion de movimiento
-    //devuelve true si podemos ir en dicha dirección y false si algo nos impode avanzar
-    bool CanMoveTo(Vector2 dir)
-    {
-        //hacemos que se dibuje una linea desde la posicion de Pacman hacia la posicion donde quiere ir
-        Vector2 pacmanPos = this.transform.position;
-        //de esta manera se chequera desde el punto al que nos  dirgimos hacia el interior de pacman, la linea sale des de donde quiero ir hacia pacman, trazamos una linea desde donde quiero ir hacia pacman
-        //lo hacemos de esta manera para ver que el raycast no choque contra el de pacman al principio, de esta manera solo chocara contra el collider de pacman si no hay ningún otro collider  delante
-        RaycastHit2D hit = Physics2D.Linecast(pacmanPos + dir, pacmanPos);
-
-        Collider2D pacmanCollider = GetComponent<Collider2D>();
-        Collider2D hitCollider = hit.collider;
-
-        if (hitCollider == pacmanCollider)
-        {
-            //no tengo nada más en medio --> puedo moverme allí
-            return true;
-        }
-        else
-        {
-            //tengo un collider delante que NO es el de pacman --> no puedo moverme
-            return false;
-        }
-        // return hit.collider == GetComponent<Collider2D>();
-
-    }
+       
 }
