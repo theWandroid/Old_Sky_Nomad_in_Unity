@@ -36,16 +36,14 @@ public class PlayerController : MonoBehaviour
 
     public string nextUuid;
 
-    float joyInputH;
-    float joyInputV;
-
+    public CapsuleCollider2D playerCapCol;
 
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody2D>();
-        joystick = GameObject.Find("Controller");
+        playerCapCol = GetComponent<CapsuleCollider2D>();
         playerCreated = true;
         nextUuid = "origin";
         isTalking = false;

@@ -83,7 +83,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0625, y: 1.9375}
+  m_Size: {x: 0.54761904, y: 0.7380952}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -162,6 +162,7 @@ MonoBehaviour:
   speed: 2
   lastMovement: {x: 0, y: 0}
   nextUuid: 
+  playerCapCol: {fileID: 0}
 --- !u!114 &5239014787076211577
 MonoBehaviour:
   m_ObjectHideFlags: 0
