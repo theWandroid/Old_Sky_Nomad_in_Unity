@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/version0.1/_Group Members/Cris/Sliding Tile Puzzle Game/Scenes/SlidingTilePuzzle.unity
-    guid: c78156a8d0505db48bc2d754df2cd940
   - enabled: 0
     path: Assets/version0.1/Scenes/version 0.1/Intro.unity
     guid: 9ccaf65027579084bbbb3d4772140d35
@@ -35,6 +32,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Firebase/Scenes/Lobby.unity
     guid: e467dbf553c122f4fb03fe493babe525
+  - enabled: 0
+    path: Assets/version0.1/_Group Members/Cris/Sliding Tile Puzzle Game/Scenes/SlidingTilePuzzle.unity
+    guid: c78156a8d0505db48bc2d754df2cd940
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6cb827a511ef55146aa4becf2db87681, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 954dafae9be964445b113c723d782d17, type: 2}

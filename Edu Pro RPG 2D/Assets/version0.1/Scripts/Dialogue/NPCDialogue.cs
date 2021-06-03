@@ -31,7 +31,7 @@ public class NPCDialogue : MonoBehaviour
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
         playerController =  FindObjectOfType<PlayerController>();
-        questStart.SetActive(false);
+        //questStart.SetActive(false);
     }
 
 // Update is called once per frame
@@ -87,7 +87,7 @@ void Update()
                 if (theQuest != null)
                 {
                     Debug.Log("La mision existe!");
-                    questStart.SetActive(true);
+                    //questStart.SetActive(true);
                     string questLine = theQuest.startText;
                    // dialogueManager.ShowDialogue( questLine, npcSprite);
                 

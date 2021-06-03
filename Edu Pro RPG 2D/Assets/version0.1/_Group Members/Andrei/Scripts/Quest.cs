@@ -15,6 +15,8 @@ public class Quest : MonoBehaviour
     public string startText;
     public string completeText;
 
+    public string[] questLines;
+
     public bool needsItem;
     public List<QuestItem> itemsNeeded;
 
