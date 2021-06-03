@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "firebase_url": "null",
+    "project_number": "661427907840",
+    "project_id": "bbdd-skynomad",
+    "storage_bucket": "bbdd-skynomad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661427907840:android:5a1b3e0092538a88fb57e5",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.EduProRPG2D"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661427907840-o2fuim1kvtp72c1ii1vjti6d95e7qk1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDugCNwFwbb6McuPvd7hANhugAkISQ9tWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661427907840-o2fuim1kvtp72c1ii1vjti6d95e7qk1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

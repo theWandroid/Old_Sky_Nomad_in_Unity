@@ -23,7 +23,7 @@ public class SFXManagerSingleton: MonoBehaviour
         }
 
         sharedInstance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
 
         audios = new List<GameObject>();

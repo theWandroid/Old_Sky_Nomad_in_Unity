@@ -48,7 +48,7 @@ public void QuitGame()
         {
             if (asyncLoad.progress >= .9f)
             {
-                loadingText.text = "Press any key to continue";
+                loadingText.text = "Pulsa para continuar";
                 loadingIcon.SetActive(false);
 
                 if (Input.anyKeyDown)
