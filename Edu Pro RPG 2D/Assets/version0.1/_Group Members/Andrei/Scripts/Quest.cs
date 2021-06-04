@@ -13,9 +13,13 @@ public class Quest : MonoBehaviour
 
     public string title;
     public string startText;
+
+    public string acceptQuestText;
+    public string denyQuestText;
+
     public string completeText;
 
-    public string[] questLines;
+    public Sprite npcSprite;
 
     public bool needsItem;
     public List<QuestItem> itemsNeeded;
@@ -33,15 +37,7 @@ public class Quest : MonoBehaviour
     private UIManager uIManager;
 
     public string questScene;
-
    
-
-    /*
-     private void OnEnable(int level)
-     {
-         SceneManager.sceneLoaded += OnSceneLoaded;
-     }
-    */
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -63,7 +59,7 @@ public class Quest : MonoBehaviour
         //SFXManagerSingleton.SharedInstance.PlaySFX(SFXType.SoundType.M_START);
         uIManager = FindObjectOfType<UIManager>();
         questManager = FindObjectOfType<QuestManager>();
-        questManager.ShowQuestText(title + "\n" + startText);
+        questManager.ShowQuestText(title + "\n" + startText, npcSprite);
 
         if (needsItem)
         {
@@ -77,8 +73,9 @@ public class Quest : MonoBehaviour
 
         if (needsConfirmation)
         {
-            ActivateConfirmation();
+            ActiveConfirmation();
         }
+
 
     }
 
@@ -115,7 +112,7 @@ public class Quest : MonoBehaviour
     {
         //SFXManagerSingleton.SharedInstance.PlaySFX(SFXType.SoundType.M_END);
         questManager = FindObjectOfType<QuestManager>();
-        questManager.ShowQuestText(title + "\n" + completeText);
+        questManager.ShowQuestText(title + "\n" + completeText, npcSprite);
         questCompleted = true;
 
         if(nextQuest != null)
@@ -134,11 +131,7 @@ public class Quest : MonoBehaviour
         nextQuest.StartQuest();
     }
 
-    void ActivateConfirmation()
-    {
-        uIManager.ActiveConfirmacion();
-    }
-
+  
 
     private void Update()
     {
@@ -194,16 +187,11 @@ public class Quest : MonoBehaviour
     }
 
 
-    public void AcceptQuest()
+    public void ActiveConfirmation()
     {
-        Debug.Log("Ha aceptado la misión");
-        SceneManager.LoadScene(questScene);
+        uIManager.ActiveConfirmation(questID);
     }
 
-    public void DenyQuest()
-    {
-        Debug.Log("No ha aceptado la misión");
-    }
 
 }
 

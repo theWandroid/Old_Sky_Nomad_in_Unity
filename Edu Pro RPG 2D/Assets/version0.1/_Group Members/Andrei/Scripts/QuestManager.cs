@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class QuestManager : MonoBehaviour
     private DialogueManager dialogueManager;
     public QuestItem itemCollected;
     public QuestEnemy enemyKilled;
+    public int actualQuest;
 
+
+    public PlayerController playerController;
+    public CameraFollow cameraFollow;
    
 
     // Start is called before the first frame update
@@ -17,6 +22,8 @@ public class QuestManager : MonoBehaviour
     {
         //para ser capaces de escribir el texto de la misión en la zona del dialogo
         dialogueManager = FindObjectOfType<DialogueManager>();
+        playerController = FindObjectOfType<PlayerController>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
         //recorrera todos los hijos del QuestManager, que serán los Quest
         foreach (Transform t in transform)
         {
@@ -26,10 +33,11 @@ public class QuestManager : MonoBehaviour
         
     }
 
-    public void ShowQuestText(string questText)
+    public void ShowQuestText(string questText, Sprite npcSprite)
     {
-        dialogueManager.ShowDialogue(new string[] { questText });
-
+        dialogueManager.ShowDialogue(new string[] { questText }, npcSprite);
+        Debug.Log(quests[actualQuest]);
+        Debug.Log(quests[actualQuest].npcSprite);
         Debug.Log("Estoy hablando, y me tengo que parar");
         return;
     }
@@ -46,4 +54,30 @@ public class QuestManager : MonoBehaviour
         }
         return q;
     }
+
+    public void AcceptQuest()
+    {
+        Debug.Log("Ha aceptado la misión");
+        dialogueManager.ShowDialogue(new string[] { quests[actualQuest].acceptQuestText }, quests[actualQuest].npcSprite);
+        quests[actualQuest].questCompleted = true;
+        DisableConfirmation();
+        Utilities.LoadTwoSeconds();
+        playerController.SavePlayerPosition();
+        cameraFollow.SaveCameraPosition();
+        SceneManager.LoadScene(quests[actualQuest].questScene);
+    }
+
+    public void DenyQuest()
+    {
+        Debug.Log("No ha aceptado la misión");
+        dialogueManager.ShowDialogue(new string[] { quests[actualQuest].denyQuestText }, quests[actualQuest].npcSprite);
+        DisableConfirmation();
+    }
+
+    void DisableConfirmation()
+    {
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        uiManager.DesactiveConfirmation();
+    }
+
 }
