@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/version0.1/Scenes/version 0.1/Select Player.unity
     guid: 94049c038951c06499e1c495d32a0d84
-  - enabled: 0
+  - enabled: 1
     path: Assets/version0.1/Scenes/version 0.1/town.unity
     guid: 2fc39b1215385dd4586f2cf764b78abf
   - enabled: 0
