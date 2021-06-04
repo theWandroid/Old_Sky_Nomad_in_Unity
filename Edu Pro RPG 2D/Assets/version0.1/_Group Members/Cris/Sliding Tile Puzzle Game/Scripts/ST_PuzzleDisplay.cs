@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class ST_PuzzleDisplay : MonoBehaviour 
 {
@@ -10,6 +11,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	// el ancho y alto del rompecabezas en mosaicos (tiles).
 	public int Height = 3;
 	public int Width  = 3;
+	public int Difficulty = 1; //es el número de veces que se desordenan las piezas
 
 	// valor de escala adicional.
 	public Vector3 PuzzleScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -187,7 +189,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 
 		yield return new WaitForSeconds(1.0f);
 
-		for(int k = 0; k < 20; k++)
+		for(int k = 0; k < Difficulty; k++)
 		{
 			// usar random para colocar cada sección del rompecabezas en la matriz (array) elimine el número una vez que se llene el espacio.
 			for (int j = 0; j < Height; j++)
@@ -234,6 +236,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		{
 			// puzzle completado correctamente
 			Debug.Log("Puzzle Completado!");
+			SceneManager.LoadScene("town");
 		}
 
 		yield return null;
@@ -321,4 +324,9 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		TileDisplayArray[2,3].GetComponent<Renderer>().material = thisTileMaterial2;
 		*/
 	}
+
+	public void Return()
+    {
+		SceneManager.LoadScene("town");
+    }
 }
