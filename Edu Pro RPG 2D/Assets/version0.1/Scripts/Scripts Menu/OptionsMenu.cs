@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using TMPro;
 
 public class OptionsMenu : MonoBehaviour
 {
     //public Toggle fullscreenTog, vsyncTog;
-    public Toggle fullscreenTog;
+    //public Toggle fullscreenTog;
 
-    public ResItem[] resolutions;
+    //public ResItem[] resolutions;
 
-    public int selectedResolution; //en verdad tiene que ser privado pero para testear lo pongo publico
+    //public int selectedResolution; //en verdad tiene que ser privado pero para testear lo pongo publico
 
-    public Text resolutionLabel;
+    //public Text resolutionLabel;
 
     public AudioMixer theMixer;
 
     public Slider mastSlider, musicSlider, sfxSlider;
 
-    public Text mastLabel, musicLabel, sfxLabel;
+    public TextMeshProUGUI mastLabel, musicLabel, sfxLabel;
 
     public AudioSource sfxLoop;
 
     // Start is called before the first frame update
     void Start()
     {
-        fullscreenTog.isOn = Screen.fullScreen;
+        //fullscreenTog.isOn = Screen.fullScreen;
 
       /*  if(QualitySettings.vSyncCount == 0)
         {
@@ -38,6 +39,7 @@ public class OptionsMenu : MonoBehaviour
         }*/
 
         //search for resolution in list
+        /*
         bool foundRes = false;
         for(int i = 0; i < resolutions.Length; i++)
         {
@@ -54,7 +56,7 @@ public class OptionsMenu : MonoBehaviour
         {
             resolutionLabel.text = Screen.width.ToString() + " x " + Screen.height.ToString();
         }
-
+        */
         if (PlayerPrefs.HasKey("MasterVol"))
         {
             theMixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
@@ -77,7 +79,7 @@ public class OptionsMenu : MonoBehaviour
         musicLabel.text = (musicSlider.value + 80).ToString();
         sfxLabel.text = (sfxSlider.value + 80).ToString();
     }
-
+    /*
     public void ResLeft()
     {
         selectedResolution--;
@@ -103,7 +105,8 @@ public class OptionsMenu : MonoBehaviour
         resolutionLabel.text = resolutions[selectedResolution].horizontal.ToString() + " x " + resolutions[selectedResolution].vertical.ToString();
     }
 
-
+    */
+    /*
     public void ApplyGraphics()
     {
         //apply fullscreen
@@ -118,11 +121,11 @@ public class OptionsMenu : MonoBehaviour
         {
             QualitySettings.vSyncCount = 0;
         }*/
-
+    /*
         //set resolution
         Screen.SetResolution(resolutions[selectedResolution].horizontal, resolutions[selectedResolution].vertical, fullscreenTog.isOn);
     }
-
+*/
 
     public void SetMasterVol()
     {
