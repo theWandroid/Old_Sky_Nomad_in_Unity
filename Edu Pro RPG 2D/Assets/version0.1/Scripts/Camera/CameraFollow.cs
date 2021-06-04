@@ -14,9 +14,15 @@ public class CameraFollow : MonoBehaviour
     private Vector3 minLimits, maxLimits;
     private float halfHeight, halfWidth;
 
+    private void Start()
+    {
+        this.transform.position = LoadCameraPosition();
+
+    }
 
     public void ChangeLimits(BoxCollider2D cameraLimits)
     {
+
         cameraLimits = GameObject.Find("Limits").GetComponent<BoxCollider2D>();
 
         minLimits = cameraLimits.bounds.min;
@@ -43,6 +49,17 @@ public class CameraFollow : MonoBehaviour
     private void LateUpdate()
     {
         this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * cameraSpeed);
-     
+    }
+
+    public void SaveCameraPosition()
+    {
+        PlayerPrefs.SetFloat("cameraPositionX", this.transform.position.x);
+        PlayerPrefs.SetFloat("cameraPositionY", this.transform.position.y);
+        PlayerPrefs.SetFloat("cameraPositionZ", this.transform.position.z);
+    }
+
+    public Vector3 LoadCameraPosition()
+    {
+        return new Vector3(PlayerPrefs.GetFloat("cameraPositionX", this.transform.position.x), PlayerPrefs.GetFloat("cameraPositionY", this.transform.position.y), PlayerPrefs.GetFloat("cameraPositionZ", this.transform.position.z));
     }
 }

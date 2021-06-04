@@ -19,7 +19,7 @@ public class Intro : MonoBehaviour
     {
             yield return new WaitForSeconds(3f);
         // SceneManager.LoadScene(scene);
-        SceneManager.LoadScene("Connect");
+        SceneManager.LoadScene("Main Menu");
     }
 
 

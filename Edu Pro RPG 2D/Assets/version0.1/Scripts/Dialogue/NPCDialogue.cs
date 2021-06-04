@@ -18,7 +18,6 @@ public class NPCDialogue : MonoBehaviour
     public bool hasQuest;
     public int questId;
     public QuestManager questManager;
-    public GameObject questStart;
 
     public TextMeshProUGUI npcDialogoName;
 
@@ -31,29 +30,14 @@ public class NPCDialogue : MonoBehaviour
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
         playerController =  FindObjectOfType<PlayerController>();
-        //questStart.SetActive(false);
+        questManager = FindObjectOfType<QuestManager>();
     }
 
 // Update is called once per frame
 void Update()
     {
         if(playerInTheZone && CrossPlatformInputManager.GetButtonDown("Action")){
-            /*
-            string finalDialogue;
-            if (npcName != null)
-            {
-                finalDialogue = npcName + "\n" + npcDialogue;
-            }
-            else
-            {
-                finalDialogue = npcDialogue;
-            }*/
-            //haciendo lo anterior con el operador ternario
-            //string finalDialogue = (npcName !=null ? npcName + "\n" : "") + npcDialogue;
-            //lo inicializamos vacio
-
-
-
+        
             Debug.Log("Voy a hablar");
 
             string[] finalDialogue = new string[npcDialogueLines.Length];
@@ -62,17 +46,7 @@ void Update()
 
             foreach (string line in npcDialogueLines)
             {
-                /*
-                foreach (char character in line)
-                {
-                    finalDialogue[i++] = (npcName != null ? npcName + " \n" : "") + character + line;
-                    */
                     finalDialogue[i++]=  line ;
-                    /*
-                    yield return new WaitForSeconds(0.5f);
-                
-                }
-                */
 
             }
 
@@ -84,15 +58,14 @@ void Update()
             {
                 Debug.Log("Tengo una mison para ti");
                 Quest theQuest = questManager.QuestWithID(questId);
-                if (theQuest != null)
+
+                if (theQuest != null && theQuest.questCompleted == false)
                 {
                     Debug.Log("La mision existe!");
-                    //questStart.SetActive(true);
-                    string questLine = theQuest.startText;
-                   // dialogueManager.ShowDialogue( questLine, npcSprite);
-                
+                    Debug.Log("Ayudame a resolver este puzle");
+                    Debug.Log("Ayudame a resolver esta frase");
+                    questManager.quests[questId].StartQuest();
                 }
-            
             }
             else
             {

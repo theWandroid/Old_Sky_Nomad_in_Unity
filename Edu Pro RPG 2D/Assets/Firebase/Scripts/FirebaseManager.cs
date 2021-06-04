@@ -4,6 +4,7 @@ using UnityEngine;
 using Firebase;
 using Firebase.Auth;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FirebaseManager : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class FirebaseManager : MonoBehaviour
     [SerializeField]
     private TMP_Text registerOutputText;
 
+
+    public string scene;
 
     private void Awake()
     {

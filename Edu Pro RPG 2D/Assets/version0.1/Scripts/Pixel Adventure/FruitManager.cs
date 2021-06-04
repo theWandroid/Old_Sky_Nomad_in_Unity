@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class FruitManager : MonoBehaviour
 {
+    public string scene;
+
     private void Update()
     {
         AllFruitsCollected();
@@ -15,7 +17,9 @@ public class FruitManager : MonoBehaviour
         if (transform.childCount == 0)
         {
             Debug.Log("No quedan frutas, You Win!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(scene);
+
 
 
         }

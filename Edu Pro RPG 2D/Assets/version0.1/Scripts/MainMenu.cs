@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsScreen;
 
     public GameObject loadingScreen, loadingIcon;
-    public Text loadingText;
+    public TextMeshProUGUI loadingText;
 
     public void StartGame()
     {

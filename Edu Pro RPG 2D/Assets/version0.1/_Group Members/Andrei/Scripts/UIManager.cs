@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
     public GameObject menuPanel;
     public Button inventoryButton;
 
+    public QuestManager questManager;
+
     private ObjectManager objectManager;
 
     public GameObject confirmationPannel;
@@ -26,6 +28,7 @@ public class UIManager : MonoBehaviour
         confirmationPannel.SetActive(false);
         inventoryPanel.SetActive(false);
         menuPanel.SetActive(false);
+        questManager = FindObjectOfType<QuestManager>();
     }
 
 
@@ -76,10 +79,16 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void ActiveConfirmacion()
+    public void ActiveConfirmation( int idQuest)
     {
         Debug.Log("Se ha activado el panel de confirmación.");
         confirmationPannel.SetActive(true);
+        questManager.actualQuest = idQuest;
+            }
+
+    public void DesactiveConfirmation()
+    {
+        confirmationPannel.SetActive(false);
     }
 
     public void FillInventory()

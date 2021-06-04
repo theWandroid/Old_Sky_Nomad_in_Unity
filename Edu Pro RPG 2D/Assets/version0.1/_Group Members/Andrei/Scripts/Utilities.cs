@@ -30,4 +30,9 @@ public static class Utilities
     {
         Time.timeScale = 1.0f;
     }
+
+    public static IEnumerator LoadTwoSeconds()
+    {
+        yield return new WaitForSeconds(2.0f);
+    }
 }

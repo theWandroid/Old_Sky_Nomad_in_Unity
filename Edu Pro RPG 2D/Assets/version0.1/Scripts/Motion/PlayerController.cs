@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        this.transform.position = LoadPlayerPosition();
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -52,8 +53,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         if (isTalking)
         {
             _rigidBody.velocity = Vector2.zero;
@@ -164,5 +163,17 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat(LAST_H, lastMovement.x);
         _animator.SetFloat(LAST_V, lastMovement.y);
 
+    }
+
+    public void SavePlayerPosition()
+    {
+        PlayerPrefs.SetFloat("playerPositionX", this.transform.position.x);
+        PlayerPrefs.SetFloat("playerPositionY", this.transform.position.y);
+        PlayerPrefs.SetFloat("playerPositionZ", this.transform.position.z);
+    }
+
+    public Vector3 LoadPlayerPosition()
+    {
+        return new Vector3(PlayerPrefs.GetFloat("playerPositionX", this.transform.position.x), PlayerPrefs.GetFloat("playerPositionY", this.transform.position.y), PlayerPrefs.GetFloat("playerPositionZ", this.transform.position.z));
     }
 }

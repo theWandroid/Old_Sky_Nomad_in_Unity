@@ -10,6 +10,8 @@ public class SelectCharacter : MonoBehaviour
 
     public List<Sprite> characters;
 
+    public List<GameObject> players;
+
     public TextMeshProUGUI text;
 
     public GameObject loadingScreen, loadingIcon;
@@ -25,27 +27,35 @@ public class SelectCharacter : MonoBehaviour
 
     public Image playerImage;
 
+    public CameraFollow cameraFollow;
+
     private int num;
 
     private Image _image;
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-        playerImage.sprite = characters[0];
-        _image = this.gameObject.GetComponent<Image>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
+        cameraFollow.target = players[0];
         Debug.Log(num);
     }
 
     public void NextCharacter()
     {
-        if (num < characters.Count -1)
+        if (num < players.Count -1)
         {
         num++;
-        Debug.Log(num);
-        playerImage.sprite = characters[num];
+        }else if (num >= players.Count -1)
+        {
+            num = 0;
         }
+        Debug.Log(num);
+
+        ChangeTarget();
     }
 
     public void PreviousCharacter()
@@ -53,14 +63,17 @@ public class SelectCharacter : MonoBehaviour
         if (num > 0)
         {
         num--;
-        Debug.Log(num);
-        playerImage.sprite = characters[num];
+        } else if (num <= 0)
+        {
+            num = players.Count - 1;
         }
+        Debug.Log(num);
+        ChangeTarget();
     }
 
     public void ChoiceCharacter()
     {
-        if (num >= 0 && num <= characters.Count)
+        if (num >= 0 && num <= players.Count)
         {
             string characterChoice = "";
             if (num == 0)
@@ -89,8 +102,13 @@ public class SelectCharacter : MonoBehaviour
         {
             Debug.Log("El personaje no esta dentro de las opciones");
         }
-
     
+    }
+
+    private void ChangeTarget()
+    {
+        cameraFollow.target = players[num];
+        players[num].GetComponent<SelectionPlayerMovement>().facingDirection = new Vector2(0, -1);
     }
 
 
@@ -98,7 +116,7 @@ public class SelectCharacter : MonoBehaviour
     {
         loadingScreen.SetActive(true);
         selectPlayerPanel.SetActive(false);
-        _image.color = new Color32(0, 0, 0, 0);
+        //_image.color = new Color32(0, 0, 0, 0);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(townScene);
 
