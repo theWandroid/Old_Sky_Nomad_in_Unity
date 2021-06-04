@@ -49,10 +49,13 @@ public class SelectCharacter : MonoBehaviour
         if (num < players.Count -1)
         {
         num++;
-        Debug.Log(num);
-        cameraFollow.target = players[num];
-        players[num].GetComponent<SelectionPlayerMovement>().facingDirection = new Vector2(0, -1);
+        }else if (num >= players.Count -1)
+        {
+            num = 0;
         }
+        Debug.Log(num);
+
+        ChangeTarget();
     }
 
     public void PreviousCharacter()
@@ -60,10 +63,12 @@ public class SelectCharacter : MonoBehaviour
         if (num > 0)
         {
         num--;
-        Debug.Log(num);
-        cameraFollow.target = players[num];
-        players[num].GetComponent<SelectionPlayerMovement>().facingDirection = new Vector2(0, -1);
+        } else if (num <= 0)
+        {
+            num = players.Count - 1;
         }
+        Debug.Log(num);
+        ChangeTarget();
     }
 
     public void ChoiceCharacter()
@@ -102,7 +107,8 @@ public class SelectCharacter : MonoBehaviour
 
     private void ChangeTarget()
     {
-    
+        cameraFollow.target = players[num];
+        players[num].GetComponent<SelectionPlayerMovement>().facingDirection = new Vector2(0, -1);
     }
 
 
