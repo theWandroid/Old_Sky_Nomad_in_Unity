@@ -51,27 +51,6 @@ public class PlayerMove : MonoBehaviour
             }
             
         }
-        
-        if (CheckGround.isGrounded == false)
-        {
-            animator.SetBool("Jump", true);
-            animator.SetBool("Run", false);
-        }
-        
-        if (CheckGround.isGrounded == true)
-        {
-            animator.SetBool("Jump", false);
-            animator.SetBool("DobleJump", false);
-            animator.SetBool("Falling", false);
-        }
-        if (rb2D.velocity.y<0)
-        {
-            animator.SetBool("Falling", true);
-        }
-        else if (rb2D.velocity.y > 0)
-        {
-            animator.SetBool("Falling", false);
-        }
     }
 
 
@@ -114,13 +93,10 @@ public class PlayerMove : MonoBehaviour
             }
 
             rb2D.velocity = new Vector2(CrossPlatformInputManager.GetAxis(AXIS_H), rb2D.velocity.y).normalized * runSpeed;
-            animator.SetBool("Run", true);
-
         }
         else
         {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-            animator.SetBool("Run", false);
         }
 
 
@@ -134,6 +110,39 @@ public class PlayerMove : MonoBehaviour
             {
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier) * Time.deltaTime;
             }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (CheckGround.isGrounded == false)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
+        }
+
+        if (CheckGround.isGrounded == true)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("DobleJump", false);
+            animator.SetBool("Falling", false);
+        }
+        if (rb2D.velocity.y < 0)
+        {
+            animator.SetBool("Falling", true);
+        }
+        else if (rb2D.velocity.y > 0)
+        {
+            animator.SetBool("Falling", false);
+        }
+
+        if (CrossPlatformInputManager.GetAxis(AXIS_H) != 0)
+        {
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
         }
     }
 }
