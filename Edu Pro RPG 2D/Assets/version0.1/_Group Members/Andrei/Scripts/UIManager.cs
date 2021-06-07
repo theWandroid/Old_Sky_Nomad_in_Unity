@@ -147,5 +147,6 @@ public void ChangeAvatarImage(Sprite sprite)
     public void Quit()
     {
         Application.Quit();
+        Debug.Log("La aplicación se ha cerrado con éxito");
     }
 }

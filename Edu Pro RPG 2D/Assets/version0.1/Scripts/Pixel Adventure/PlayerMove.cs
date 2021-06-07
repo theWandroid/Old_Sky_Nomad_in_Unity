@@ -106,7 +106,7 @@ public class PlayerMove : MonoBehaviour
             {
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier) * Time.deltaTime;
             }
-            if (rb2D.velocity.y>0 && !Input.GetKey("space"))
+            if (rb2D.velocity.y>0 && !Input.GetKey("space") || rb2D.velocity.y > 0 && !CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier) * Time.deltaTime;
             }

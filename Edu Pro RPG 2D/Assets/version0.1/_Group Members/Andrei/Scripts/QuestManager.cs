@@ -61,7 +61,7 @@ public class QuestManager : MonoBehaviour
         dialogueManager.ShowDialogue(new string[] { quests[actualQuest].acceptQuestText }, quests[actualQuest].npcSprite);
         quests[actualQuest].questCompleted = true;
         DisableConfirmation();
-        Utilities.LoadTwoSeconds();
+        StartCoroutine(Utilities.LoadTwoSeconds());
         playerController.SavePlayerPosition();
         cameraFollow.SaveCameraPosition();
         SceneManager.LoadScene(quests[actualQuest].questScene);
