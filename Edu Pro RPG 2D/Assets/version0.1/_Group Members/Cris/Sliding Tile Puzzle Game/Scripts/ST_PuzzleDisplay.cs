@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ST_PuzzleDisplay : MonoBehaviour 
 {
+	private PuzleManager puzleManager;
+
 	// esta textura de rompecabezas.
 	public Texture PuzzleImage;
 
@@ -42,6 +44,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 	// Use esto para la inicialización 
 	void Start () 
 	{
+		puzleManager = FindObjectOfType<PuzleManager>();
 		// crea los mosaicos del rompecabezas del juego a partir de la imagen proporcionada.
 		CreatePuzzleTiles();
 
@@ -236,7 +239,8 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		{
 			// puzzle completado correctamente
 			Debug.Log("Puzzle Completado!");
-			SceneManager.LoadScene("town");
+			//SceneManager.LoadScene("town");
+			puzleManager.Return();
 		}
 
 		yield return null;
@@ -325,8 +329,5 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		*/
 	}
 
-	public void Return()
-    {
-		SceneManager.LoadScene("town");
-    }
+	
 }

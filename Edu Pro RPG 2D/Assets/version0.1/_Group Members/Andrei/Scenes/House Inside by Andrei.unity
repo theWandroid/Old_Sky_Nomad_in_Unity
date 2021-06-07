@@ -8519,11 +8519,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1312267390658818051, guid: 87e5470b5a984384a85fcb2820b00b0c, type: 3}
       propertyPath: uuid
-      value: Pueblo Casa Madera
+      value: fuera interior 01
       objectReference: {fileID: 0}
     - target: {fileID: 1312267390658818051, guid: 87e5470b5a984384a85fcb2820b00b0c, type: 3}
       propertyPath: newPlaceName
-      value: Pueblo
+      value: town
       objectReference: {fileID: 0}
     - target: {fileID: 6020489372763316453, guid: 87e5470b5a984384a85fcb2820b00b0c, type: 3}
       propertyPath: m_RootOrder
@@ -20481,7 +20481,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2715394226852656242, guid: 3813ab2a00a913e4386da3415ac70d5f, type: 3}
       propertyPath: uuid
-      value: Casa Madera
+      value: entrada
       objectReference: {fileID: 0}
     - target: {fileID: 2715394226852656242, guid: 3813ab2a00a913e4386da3415ac70d5f, type: 3}
       propertyPath: facingDirection.y
