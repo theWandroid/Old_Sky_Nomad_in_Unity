@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+
 
 public class PlayerMove : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class PlayerMove : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Animator animator;
 
+    private const string AXIS_H = "Horizontal";
+
 
     void Start()
     {
@@ -26,7 +30,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space")  || CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             if (CheckGround.isGrounded)
             {
@@ -35,7 +39,7 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown("space"))
+                if (Input.GetKeyDown("space") || CrossPlatformInputManager.GetButtonDown("Jump"))
                 {
                     if (canDobleJump)
                     {
@@ -73,6 +77,9 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+
+#if UNITY_STANDALONE_WIN
+
         if (Input.GetKey("d") || Input.GetKey("right")) 
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
@@ -92,8 +99,31 @@ public class PlayerMove : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("Run", false);
         }
-       
-        
+
+#endif
+
+        if (CrossPlatformInputManager.GetAxis(AXIS_H) != 0)
+        {
+            if (CrossPlatformInputManager.GetAxis(AXIS_H) > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                spriteRenderer.flipX = true;
+            }
+
+            rb2D.velocity = new Vector2(CrossPlatformInputManager.GetAxis(AXIS_H), rb2D.velocity.y).normalized * runSpeed;
+            animator.SetBool("Run", true);
+
+        }
+        else
+        {
+            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            animator.SetBool("Run", false);
+        }
+
+
         if (betterJump)
         {
             if (rb2D.velocity.y<0)
